@@ -17,3 +17,12 @@ predict_win <- function(training_data, new_data, home_score, away_score, home_te
   model <- glm(model_formula, data = training_data, family = binomial)
   
   
+  # Make predictions on new data
+  new_data$PredictedOutcome <- predict(model, newdata = new_data, type = "response")
+  
+  # Convert predicted probabilities to binary outcome
+  new_data$PredictedOutcome <- ifelse(new_data$PredictedOutcome > 0.5, 1, 0)
+  
+  return(new_data$PredictedOutcome)
+}
+
