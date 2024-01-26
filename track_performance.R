@@ -2,6 +2,7 @@
 track_performance <- function(team_name) {
   # Load necessary libraries
   library(ggplot2)
+  library(plotly)
   
   # Constant file path
   csv_file_path <- "/Users/christophermulya/Downloads/match_data.csv"
@@ -22,9 +23,13 @@ track_performance <- function(team_name) {
   team_data <- team_data[complete.cases(team_data[, c('FT_ScoreHome', 'FT_scoreAway')]), ]
   
   # Plotting
-  ggplot(team_data, aes(x = FixtureNumber, 
-                        y = ifelse(Location == "Home", FT_ScoreHome, FT_scoreAway),
-                        color = Location)) +
+  plot <- ggplot(team_data, aes(x = FixtureNumber, 
+                                y = ifelse(Location == "Home", FT_ScoreHome, FT_scoreAway),
+                                color = Location,
+                                text = paste("Opponent: ", ifelse(Location == "Home", AwayTeam, HomeTeam),
+                                             "<br>Date: ", FixtureDate,
+                                             "<br>Stadium: ", Stadium,
+                                             "<br>Referee: ", Referee))) +
     geom_line(aes(group = Location), linewidth = 1) +
     geom_point(aes(shape = Location), size = 2) +
     labs(title = paste("Team Performance: ", team_name),
@@ -33,6 +38,9 @@ track_performance <- function(team_name) {
          color = "Location",
          shape = "Location") +
     theme_minimal()
+  
+  # Convert ggplot object to plotly object for interactive features
+  plotly::ggplotly(plot, tooltip = "text")
 }
 
 # Example usage:
