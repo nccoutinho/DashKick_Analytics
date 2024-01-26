@@ -4,7 +4,7 @@ track_performance <- function(team_name) {
   library(ggplot2)
   
   # Constant file path
-  csv_file_path <- "/Users/christophermulya/Downloads/match_data.csv"  # Replace with the actual file path
+  csv_file_path <- "/Users/christophermulya/Downloads/match_data.csv"
   
   # Read the CSV file
   fixtures <- read.csv(csv_file_path)
@@ -15,12 +15,17 @@ track_performance <- function(team_name) {
   # Create a new column to identify if the team is playing at home or away
   team_data$Location <- ifelse(team_data$HomeTeam == team_name, "Home", "Away")
   
+  # Create a new variable to represent the order of fixtures
+  team_data$FixtureNumber <- seq_len(nrow(team_data))
+  
   # Plotting
-  ggplot(team_data, aes(x = FixtureDate, y = FT_ScoreHome, color = Location)) +
+  ggplot(team_data, aes(x = FixtureNumber, 
+                        y = ifelse(Location == "Home", FT_ScoreHome, FT_scoreAway),
+                        color = Location)) +
     geom_line(aes(group = Location), linewidth = 1) +
     geom_point(aes(shape = Location), size = 2) +
     labs(title = paste("Team Performance: ", team_name),
-         x = "Fixture Date",
+         x = "Fixture Number",
          y = "Goals Scored",
          color = "Location",
          shape = "Location") +
