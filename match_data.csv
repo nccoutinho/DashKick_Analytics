@@ -1,0 +1,381 @@
+"FixtureDate","TimeStamp","Stadium","Status","HomeTeam","AwayTeam","Home_Winner","FT_ScoreHome","FT_scoreAway","HT_ScoreHome","HT_scoreAway","Referee"
+"2023-08-11T19:00:00+00:00",1691780400,"Turf Moor","FT","Burnley","Manchester City",FALSE,0,3,0,2,"C. Pawson"
+"2023-08-12T11:30:00+00:00",1691839800,"Emirates Stadium","FT","Arsenal","Nottingham Forest",TRUE,2,1,2,0,"M. Oliver"
+"2023-08-12T14:00:00+00:00",1691848800,"Vitality Stadium","FT","Bournemouth","West Ham",NA,1,1,0,0,"P. Bankes"
+"2023-08-12T14:00:00+00:00",1691848800,"The American Express Community Stadium","FT","Brighton","Luton",TRUE,4,1,1,0,"D. Coote"
+"2023-08-12T14:00:00+00:00",1691848800,"Goodison Park","FT","Everton","Fulham",FALSE,0,1,0,0,"S. Attwell"
+"2023-08-12T14:00:00+00:00",1691848800,"Bramall Lane","FT","Sheffield Utd","Crystal Palace",FALSE,0,1,0,0,"J. Brooks"
+"2023-08-12T16:30:00+00:00",1691857800,"St. James' Park","FT","Newcastle","Aston Villa",TRUE,5,1,2,1,"A. Madley"
+"2023-08-13T13:00:00+00:00",1691931600,"Gtech Community Stadium","FT","Brentford","Tottenham",NA,2,2,2,2,"R. Jones"
+"2023-08-13T15:30:00+00:00",1691940600,"Stamford Bridge","FT","Chelsea","Liverpool",NA,1,1,1,1,"A. Taylor"
+"2023-08-14T19:00:00+00:00",1692039600,"Old Trafford","FT","Manchester United","Wolves",TRUE,1,0,0,0,"S. Hooper"
+"2023-08-20T13:00:00+00:00",1692536400,"Villa Park","FT","Aston Villa","Everton",TRUE,4,0,2,0,"A. Taylor"
+"2023-08-21T19:00:00+00:00",1692644400,"Selhurst Park","FT","Crystal Palace","Arsenal",FALSE,0,1,0,0,"D. Coote"
+"2023-08-19T14:00:00+00:00",1692453600,"Craven Cottage","FT","Fulham","Brentford",FALSE,0,3,0,1,"D. Bond"
+"2023-08-19T14:00:00+00:00",1692453600,"Anfield","FT","Liverpool","Bournemouth",TRUE,3,1,2,1,"T. Bramall"
+"2023-10-03T18:30:00+00:00",1696357800,"Kenilworth Road","FT","Luton","Burnley",FALSE,1,2,0,1,"P. Bankes"
+"2023-08-19T19:00:00+00:00",1692471600,"Etihad Stadium","FT","Manchester City","Newcastle",TRUE,1,0,1,0,"R. Jones"
+"2023-08-18T18:45:00+00:00",1692384300,"The City Ground","FT","Nottingham Forest","Sheffield Utd",TRUE,2,1,1,0,"P. Bankes"
+"2023-08-19T16:30:00+00:00",1692462600,"Tottenham Hotspur Stadium","FT","Tottenham","Manchester United",TRUE,2,0,0,0,"M. Oliver"
+"2023-08-20T15:30:00+00:00",1692545400,"London Stadium","FT","West Ham","Chelsea",TRUE,3,1,1,1,"J. Brooks"
+"2023-08-19T14:00:00+00:00",1692453600,"Molineux Stadium","FT","Wolves","Brighton",FALSE,1,4,0,1,"A. Madley"
+"2023-08-26T11:30:00+00:00",1693049400,"Vitality Stadium","FT","Bournemouth","Tottenham",FALSE,0,2,0,1,"T. Robinson"
+"2023-08-26T14:00:00+00:00",1693058400,"Emirates Stadium","FT","Arsenal","Fulham",NA,2,2,0,1,"P. Tierney"
+"2023-08-26T14:00:00+00:00",1693058400,"Gtech Community Stadium","FT","Brentford","Crystal Palace",NA,1,1,1,0,"P. Bankes"
+"2023-08-26T16:30:00+00:00",1693067400,"The American Express Community Stadium","FT","Brighton","West Ham",FALSE,1,3,0,1,"A. Taylor"
+"2023-08-27T13:00:00+00:00",1693141200,"Turf Moor","FT","Burnley","Aston Villa",FALSE,1,3,0,2,"M. Salisbury"
+"2023-08-25T19:00:00+00:00",1692990000,"Stamford Bridge","FT","Chelsea","Luton",TRUE,3,0,1,0,"R. Jones"
+"2023-08-26T14:00:00+00:00",1693058400,"Goodison Park","FT","Everton","Wolves",FALSE,0,1,0,0,"C. Pawson"
+"2023-08-26T14:00:00+00:00",1693058400,"Old Trafford","FT","Manchester United","Nottingham Forest",TRUE,3,2,1,2,"S. Attwell"
+"2023-08-27T15:30:00+00:00",1693150200,"St. James' Park","FT","Newcastle","Liverpool",FALSE,1,2,1,0,"J. Brooks"
+"2023-08-27T13:00:00+00:00",1693141200,"Bramall Lane","FT","Sheffield Utd","Manchester City",FALSE,1,2,0,0,"J. Gillett"
+"2023-09-03T15:30:00+00:00",1693755000,"Emirates Stadium","FT","Arsenal","Manchester United",TRUE,3,1,1,1,"A. Taylor"
+"2023-09-02T14:00:00+00:00",1693663200,"Gtech Community Stadium","FT","Brentford","Bournemouth",NA,2,2,1,1,"R. Madley"
+"2023-09-02T16:30:00+00:00",1693672200,"The American Express Community Stadium","FT","Brighton","Newcastle",TRUE,3,1,1,0,"S. Attwell"
+"2023-09-02T14:00:00+00:00",1693663200,"Turf Moor","FT","Burnley","Tottenham",FALSE,2,5,1,2,"D. England"
+"2023-09-02T14:00:00+00:00",1693663200,"Stamford Bridge","FT","Chelsea","Nottingham Forest",FALSE,0,1,0,0,"T. Robinson"
+"2023-09-03T13:00:00+00:00",1693746000,"Selhurst Park","FT","Crystal Palace","Wolves",TRUE,3,2,0,0,"R. Jones"
+"2023-09-03T13:00:00+00:00",1693746000,"Anfield","FT","Liverpool","Aston Villa",TRUE,3,0,2,0,"S. Hooper"
+"2023-09-01T19:00:00+00:00",1693594800,"Kenilworth Road","FT","Luton","West Ham",FALSE,1,2,0,1,"P. Tierney"
+"2023-09-02T14:00:00+00:00",1693663200,"Etihad Stadium","FT","Manchester City","Fulham",TRUE,5,1,2,1,"M. Oliver"
+"2023-09-02T11:30:00+00:00",1693654200,"Bramall Lane","FT","Sheffield Utd","Everton",NA,2,2,2,1,"A. Madley"
+"2023-09-17T13:00:00+00:00",1694955600,"Vitality Stadium","FT","Bournemouth","Chelsea",NA,0,0,0,0,"D. Coote"
+"2023-09-16T14:00:00+00:00",1694872800,"Villa Park","FT","Aston Villa","Crystal Palace",TRUE,3,1,0,0,"D. England"
+"2023-09-17T15:30:00+00:00",1694964600,"Goodison Park","FT","Everton","Arsenal",FALSE,0,1,0,0,"S. Hooper"
+"2023-09-16T14:00:00+00:00",1694872800,"Craven Cottage","FT","Fulham","Luton",TRUE,1,0,0,0,"M. Salisbury"
+"2023-09-16T14:00:00+00:00",1694872800,"Old Trafford","FT","Manchester United","Brighton",FALSE,1,3,0,1,"J. Gillett"
+"2023-09-16T16:30:00+00:00",1694881800,"St. James' Park","FT","Newcastle","Brentford",TRUE,1,0,0,0,"C. Pawson"
+"2023-09-18T18:45:00+00:00",1695062700,"The City Ground","FT","Nottingham Forest","Burnley",NA,1,1,0,1,"R. Jones"
+"2023-09-16T14:00:00+00:00",1694872800,"Tottenham Hotspur Stadium","FT","Tottenham","Sheffield Utd",TRUE,2,1,0,0,"P. Bankes"
+"2023-09-16T14:00:00+00:00",1694872800,"London Stadium","FT","West Ham","Manchester City",FALSE,1,3,1,0,"A. Madley"
+"2023-09-16T11:30:00+00:00",1694863800,"Molineux Stadium","FT","Wolves","Liverpool",FALSE,1,3,1,0,"M. Oliver"
+"2023-09-24T13:00:00+00:00",1695560400,"Emirates Stadium","FT","Arsenal","Tottenham",NA,2,2,1,1,"R. Jones"
+"2023-09-23T16:30:00+00:00",1695486600,"Gtech Community Stadium","FT","Brentford","Everton",FALSE,1,3,1,1,"M. Oliver"
+"2023-09-24T13:00:00+00:00",1695560400,"The American Express Community Stadium","FT","Brighton","Bournemouth",TRUE,3,1,1,1,"J. Brooks"
+"2023-09-23T19:00:00+00:00",1695495600,"Turf Moor","FT","Burnley","Manchester United",FALSE,0,1,0,1,"T. Harrington"
+"2023-09-24T13:00:00+00:00",1695560400,"Stamford Bridge","FT","Chelsea","Aston Villa",FALSE,0,1,0,0,"J. Gillett"
+"2023-09-23T14:00:00+00:00",1695477600,"Selhurst Park","FT","Crystal Palace","Fulham",NA,0,0,0,0,"P. Tierney"
+"2023-09-24T13:00:00+00:00",1695560400,"Anfield","FT","Liverpool","West Ham",TRUE,3,1,1,1,"C. Kavanagh"
+"2023-09-23T14:00:00+00:00",1695477600,"Kenilworth Road","FT","Luton","Wolves",NA,1,1,0,0,"J. Smith"
+"2023-09-23T14:00:00+00:00",1695477600,"Etihad Stadium","FT","Manchester City","Nottingham Forest",TRUE,2,0,2,0,"A. Taylor"
+"2023-09-24T15:30:00+00:00",1695569400,"Bramall Lane","FT","Sheffield Utd","Newcastle",FALSE,0,8,0,3,"S. Attwell"
+"2023-09-30T14:00:00+00:00",1696082400,"Vitality Stadium","FT","Bournemouth","Arsenal",FALSE,0,4,0,2,"M. Salisbury"
+"2023-09-30T11:30:00+00:00",1696073400,"Villa Park","FT","Aston Villa","Brighton",TRUE,6,1,3,0,"A. Madley"
+"2023-09-30T14:00:00+00:00",1696082400,"Goodison Park","FT","Everton","Luton",FALSE,1,2,1,2,"A. Taylor"
+"2023-10-02T19:00:00+00:00",1696273200,"Craven Cottage","FT","Fulham","Chelsea",FALSE,0,2,0,2,"T. Robinson"
+"2023-09-30T14:00:00+00:00",1696082400,"Old Trafford","FT","Manchester United","Crystal Palace",FALSE,0,1,0,1,"C. Kavanagh"
+"2023-09-30T14:00:00+00:00",1696082400,"St. James' Park","FT","Newcastle","Burnley",TRUE,2,0,1,0,"T. Bramall"
+"2023-10-01T13:00:00+00:00",1696165200,"The City Ground","FT","Nottingham Forest","Brentford",NA,1,1,0,0,"P. Tierney"
+"2023-09-30T16:30:00+00:00",1696091400,"Tottenham Hotspur Stadium","FT","Tottenham","Liverpool",TRUE,2,1,1,1,"S. Hooper"
+"2023-09-30T14:00:00+00:00",1696082400,"London Stadium","FT","West Ham","Sheffield Utd",TRUE,2,0,2,0,"G. Scott"
+"2023-09-30T14:00:00+00:00",1696082400,"Molineux Stadium","FT","Wolves","Manchester City",TRUE,2,1,1,0,"C. Pawson"
+"2023-10-08T15:30:00+00:00",1696779000,"Emirates Stadium","FT","Arsenal","Manchester City",TRUE,1,0,0,0,"M. Oliver"
+"2023-10-08T13:00:00+00:00",1696770000,"The American Express Community Stadium","FT","Brighton","Liverpool",NA,2,2,1,2,"A. Taylor"
+"2023-10-07T14:00:00+00:00",1696687200,"Turf Moor","FT","Burnley","Chelsea",FALSE,1,4,1,1,"S. Attwell"
+"2023-10-07T16:30:00+00:00",1696696200,"Selhurst Park","FT","Crystal Palace","Nottingham Forest",NA,0,0,0,0,"C. Pawson"
+"2023-10-07T14:00:00+00:00",1696687200,"Goodison Park","FT","Everton","Bournemouth",TRUE,3,0,2,0,"D. Coote"
+"2023-10-07T14:00:00+00:00",1696687200,"Craven Cottage","FT","Fulham","Sheffield Utd",TRUE,3,1,0,0,"S. Barrott"
+"2023-10-07T11:30:00+00:00",1696678200,"Kenilworth Road","FT","Luton","Tottenham",FALSE,0,1,0,0,"J. Brooks"
+"2023-10-07T14:00:00+00:00",1696687200,"Old Trafford","FT","Manchester United","Brentford",TRUE,2,1,0,1,"A. Madley"
+"2023-10-08T13:00:00+00:00",1696770000,"London Stadium","FT","West Ham","Newcastle",NA,2,2,1,0,"P. Bankes"
+"2023-10-08T13:00:00+00:00",1696770000,"Molineux Stadium","FT","Wolves","Aston Villa",NA,1,1,0,0,"R. Jones"
+"2023-10-21T14:00:00+00:00",1697896800,"Vitality Stadium","FT","Bournemouth","Wolves",FALSE,1,2,1,0,"P. Tierney"
+"2023-10-22T15:30:00+00:00",1697988600,"Villa Park","FT","Aston Villa","West Ham",TRUE,4,1,1,0,"D. Coote"
+"2023-10-21T14:00:00+00:00",1697896800,"Gtech Community Stadium","FT","Brentford","Burnley",TRUE,3,0,1,0,"J. Smith"
+"2023-10-21T16:30:00+00:00",1697905800,"Stamford Bridge","FT","Chelsea","Arsenal",NA,2,2,1,0,"C. Kavanagh"
+"2023-10-21T11:30:00+00:00",1697887800,"Anfield","FT","Liverpool","Everton",TRUE,2,0,0,0,"C. Pawson"
+"2023-10-21T14:00:00+00:00",1697896800,"Etihad Stadium","FT","Manchester City","Brighton",TRUE,2,1,2,0,"R. Jones"
+"2023-10-21T14:00:00+00:00",1697896800,"St. James' Park","FT","Newcastle","Crystal Palace",TRUE,4,0,3,0,"T. Robinson"
+"2023-10-21T14:00:00+00:00",1697896800,"The City Ground","FT","Nottingham Forest","Luton",NA,2,2,0,0,"S. Barrott"
+"2023-10-21T19:00:00+00:00",1697914800,"Bramall Lane","FT","Sheffield Utd","Manchester United",FALSE,1,2,1,1,"M. Oliver"
+"2023-10-23T19:00:00+00:00",1698087600,"Tottenham Hotspur Stadium","FT","Tottenham","Fulham",TRUE,2,0,1,0,"A. Taylor"
+"2023-10-28T14:00:00+00:00",1698501600,"Vitality Stadium","FT","Bournemouth","Burnley",TRUE,2,1,1,1,"S. Barrott"
+"2023-10-28T14:00:00+00:00",1698501600,"Emirates Stadium","FT","Arsenal","Sheffield Utd",TRUE,5,0,1,0,"T. Robinson"
+"2023-10-29T14:00:00+00:00",1698588000,"Villa Park","FT","Aston Villa","Luton",TRUE,3,1,1,0,"J. Brooks"
+"2023-10-29T14:00:00+00:00",1698588000,"The American Express Community Stadium","FT","Brighton","Fulham",NA,1,1,1,0,"M. Salisbury"
+"2023-10-28T11:30:00+00:00",1698492600,"Stamford Bridge","FT","Chelsea","Brentford",FALSE,0,2,0,0,"S. Hooper"
+"2023-10-27T19:00:00+00:00",1698433200,"Selhurst Park","FT","Crystal Palace","Tottenham",FALSE,1,2,0,0,"A. Madley"
+"2023-10-29T14:00:00+00:00",1698588000,"Anfield","FT","Liverpool","Nottingham Forest",TRUE,3,0,2,0,"C. Kavanagh"
+"2023-10-29T15:30:00+00:00",1698593400,"Old Trafford","FT","Manchester United","Manchester City",FALSE,0,3,0,1,"P. Tierney"
+"2023-10-29T13:00:00+00:00",1698584400,"London Stadium","FT","West Ham","Everton",FALSE,0,1,0,0,"S. Attwell"
+"2023-10-28T16:30:00+00:00",1698510600,"Molineux Stadium","FT","Wolves","Newcastle",NA,2,2,1,2,"A. Taylor"
+"2023-11-04T15:00:00+00:00",1699110000,"Gtech Community Stadium","FT","Brentford","West Ham",TRUE,3,2,1,2,"T. Bramall"
+"2023-11-04T15:00:00+00:00",1699110000,"Turf Moor","FT","Burnley","Crystal Palace",FALSE,0,2,0,1,"P. Bankes"
+"2023-11-04T15:00:00+00:00",1699110000,"Goodison Park","FT","Everton","Brighton",NA,1,1,1,0,"T. Robinson"
+"2023-11-04T12:30:00+00:00",1699101000,"Craven Cottage","FT","Fulham","Manchester United",FALSE,0,1,0,0,"J. Brooks"
+"2023-11-05T16:30:00+00:00",1699201800,"Kenilworth Road","FT","Luton","Liverpool",NA,1,1,0,0,"A. Madley"
+"2023-11-04T15:00:00+00:00",1699110000,"Etihad Stadium","FT","Manchester City","Bournemouth",TRUE,6,1,3,0,"C. Pawson"
+"2023-11-04T17:30:00+00:00",1699119000,"St. James' Park","FT","Newcastle","Arsenal",TRUE,1,0,0,0,"S. Attwell"
+"2023-11-05T14:00:00+00:00",1699192800,"The City Ground","FT","Nottingham Forest","Aston Villa",TRUE,2,0,1,0,"J. Gillett"
+"2023-11-04T15:00:00+00:00",1699110000,"Bramall Lane","FT","Sheffield Utd","Wolves",TRUE,2,1,0,0,"R. Jones"
+"2023-11-06T20:00:00+00:00",1699300800,"Tottenham Hotspur Stadium","FT","Tottenham","Chelsea",FALSE,1,4,1,1,"M. Oliver"
+"2023-11-11T17:30:00+00:00",1699723800,"Vitality Stadium","FT","Bournemouth","Newcastle",TRUE,2,0,0,0,"C. Kavanagh"
+"2023-11-11T15:00:00+00:00",1699714800,"Emirates Stadium","FT","Arsenal","Burnley",TRUE,3,1,1,0,"M. Oliver"
+"2023-11-12T14:00:00+00:00",1699797600,"Villa Park","FT","Aston Villa","Fulham",TRUE,3,1,2,0,"S. Hooper"
+"2023-11-12T14:00:00+00:00",1699797600,"The American Express Community Stadium","FT","Brighton","Sheffield Utd",NA,1,1,1,0,"J. Brooks"
+"2023-11-12T16:30:00+00:00",1699806600,"Stamford Bridge","FT","Chelsea","Manchester City",NA,4,4,2,2,"A. Taylor"
+"2023-11-11T15:00:00+00:00",1699714800,"Selhurst Park","FT","Crystal Palace","Everton",FALSE,2,3,1,1,"S. Barrott"
+"2023-11-12T14:00:00+00:00",1699797600,"Anfield","FT","Liverpool","Brentford",TRUE,3,0,1,0,"P. Tierney"
+"2023-11-11T15:00:00+00:00",1699714800,"Old Trafford","FT","Manchester United","Luton",TRUE,1,0,0,0,"G. Scott"
+"2023-11-12T14:00:00+00:00",1699797600,"London Stadium","FT","West Ham","Nottingham Forest",TRUE,3,2,1,1,"M. Salisbury"
+"2023-11-11T12:30:00+00:00",1699705800,"Molineux Stadium","FT","Wolves","Tottenham",TRUE,2,1,0,1,"T. Robinson"
+"2023-11-25T17:30:00+00:00",1700933400,"Gtech Community Stadium","FT","Brentford","Arsenal",FALSE,0,1,0,0,"T. Robinson"
+"2023-11-25T15:00:00+00:00",1700924400,"Turf Moor","FT","Burnley","West Ham",FALSE,1,2,0,0,"S. Barrott"
+"2023-11-26T16:30:00+00:00",1701016200,"Goodison Park","FT","Everton","Manchester United",FALSE,0,3,0,1,"J. Brooks"
+"2023-11-27T20:00:00+00:00",1701115200,"Craven Cottage","FT","Fulham","Wolves",TRUE,3,2,1,1,"M. Salisbury"
+"2023-11-25T15:00:00+00:00",1700924400,"Kenilworth Road","FT","Luton","Crystal Palace",TRUE,2,1,0,0,"J. Gillett"
+"2023-11-25T12:30:00+00:00",1700915400,"Etihad Stadium","FT","Manchester City","Liverpool",NA,1,1,1,0,"C. Kavanagh"
+"2023-11-25T15:00:00+00:00",1700924400,"St. James' Park","FT","Newcastle","Chelsea",TRUE,4,1,1,1,"S. Hooper"
+"2023-11-25T15:00:00+00:00",1700924400,"The City Ground","FT","Nottingham Forest","Brighton",FALSE,2,3,1,2,"A. Taylor"
+"2023-11-25T15:00:00+00:00",1700924400,"Bramall Lane","FT","Sheffield Utd","Bournemouth",FALSE,1,3,0,2,"A. Madley"
+"2023-11-26T14:00:00+00:00",1701007200,"Tottenham Hotspur Stadium","FT","Tottenham","Aston Villa",FALSE,1,2,1,1,"R. Jones"
+"2023-12-03T14:00:00+00:00",1701612000,"Vitality Stadium","FT","Bournemouth","Aston Villa",NA,2,2,1,1,"T. Bramall"
+"2023-12-02T15:00:00+00:00",1701529200,"Emirates Stadium","FT","Arsenal","Wolves",TRUE,2,1,2,0,"P. Bankes"
+"2023-12-02T15:00:00+00:00",1701529200,"Gtech Community Stadium","FT","Brentford","Luton",TRUE,3,1,0,0,"A. Taylor"
+"2023-12-02T15:00:00+00:00",1701529200,"Turf Moor","FT","Burnley","Sheffield Utd",TRUE,5,0,2,0,"C. Kavanagh"
+"2023-12-03T14:00:00+00:00",1701612000,"Stamford Bridge","FT","Chelsea","Brighton",TRUE,3,2,2,1,"C. Pawson"
+"2023-12-03T14:00:00+00:00",1701612000,"Anfield","FT","Liverpool","Fulham",TRUE,4,3,2,2,"S. Attwell"
+"2023-12-03T16:30:00+00:00",1701621000,"Etihad Stadium","FT","Manchester City","Tottenham",NA,3,3,2,1,"S. Hooper"
+"2023-12-02T20:00:00+00:00",1701547200,"St. James' Park","FT","Newcastle","Manchester United",TRUE,1,0,0,0,"R. Jones"
+"2023-12-02T17:30:00+00:00",1701538200,"The City Ground","FT","Nottingham Forest","Everton",FALSE,0,1,0,0,"P. Tierney"
+"2023-12-03T14:00:00+00:00",1701612000,"London Stadium","FT","West Ham","Crystal Palace",NA,1,1,1,0,"M. Oliver"
+"2023-12-06T20:15:00+00:00",1701893700,"Villa Park","FT","Aston Villa","Manchester City",TRUE,1,0,0,0,"J. Brooks"
+"2023-12-06T19:30:00+00:00",1701891000,"The American Express Community Stadium","FT","Brighton","Brentford",TRUE,2,1,1,1,"P. Bankes"
+"2023-12-07T19:30:00+00:00",1701977400,"Goodison Park","FT","Everton","Newcastle",TRUE,3,0,0,0,"T. Robinson"
+"2023-12-06T19:30:00+00:00",1701891000,"Craven Cottage","FT","Fulham","Nottingham Forest",TRUE,5,0,2,0,"J. Smith"
+"2023-12-05T20:15:00+00:00",1701807300,"Kenilworth Road","FT","Luton","Arsenal",FALSE,3,4,1,2,"S. Barrott"
+"2023-12-06T19:30:00+00:00",1701891000,"Bramall Lane","FT","Sheffield Utd","Liverpool",FALSE,0,2,0,1,"S. Hooper"
+"2023-12-07T20:15:00+00:00",1701980100,"Tottenham Hotspur Stadium","FT","Tottenham","West Ham",FALSE,1,2,1,0,"M. Salisbury"
+"2023-12-05T19:30:00+00:00",1701804600,"Molineux Stadium","FT","Wolves","Burnley",TRUE,1,0,1,0,"J. Gillett"
+"2023-12-06T19:30:00+00:00",1701891000,"Selhurst Park","FT","Crystal Palace","Bournemouth",FALSE,0,2,0,1,"C. Pawson"
+"2023-12-06T20:15:00+00:00",1701893700,"Old Trafford","FT","Manchester United","Chelsea",TRUE,2,1,1,1,"C. Kavanagh"
+"2023-12-09T17:30:00+00:00",1702143000,"Villa Park","FT","Aston Villa","Arsenal",TRUE,1,0,1,0,"J. Gillett"
+"2023-12-09T15:00:00+00:00",1702134000,"The American Express Community Stadium","FT","Brighton","Burnley",NA,1,1,0,1,"S. Hooper"
+"2023-12-09T12:30:00+00:00",1702125000,"Selhurst Park","FT","Crystal Palace","Liverpool",FALSE,1,2,0,0,"A. Madley"
+"2023-12-10T14:00:00+00:00",1702216800,"Goodison Park","FT","Everton","Chelsea",TRUE,2,0,0,0,"M. Oliver"
+"2023-12-10T14:00:00+00:00",1702216800,"Craven Cottage","FT","Fulham","West Ham",TRUE,5,0,3,0,"P. Tierney"
+"2023-12-10T14:00:00+00:00",1702216800,"Kenilworth Road","FT","Luton","Manchester City",FALSE,1,2,1,0,"T. Robinson"
+"2023-12-09T15:00:00+00:00",1702134000,"Old Trafford","FT","Manchester United","Bournemouth",FALSE,0,3,0,1,"P. Bankes"
+"2023-12-09T15:00:00+00:00",1702134000,"Bramall Lane","FT","Sheffield Utd","Brentford",TRUE,1,0,1,0,"S. Attwell"
+"2023-12-10T16:30:00+00:00",1702225800,"Tottenham Hotspur Stadium","FT","Tottenham","Newcastle",TRUE,4,1,2,0,"C. Kavanagh"
+"2023-12-09T15:00:00+00:00",1702134000,"Molineux Stadium","FT","Wolves","Nottingham Forest",NA,1,1,1,1,"S. Barrott"
+"2024-05-18T15:00:00+00:00",1716044400,"Vitality Stadium","TBD","Bournemouth","Luton",NA,NA,NA,NA,NA,"S. Hooper"
+"2023-12-17T14:00:00+00:00",1702821600,"Emirates Stadium","FT","Arsenal","Brighton",TRUE,2,0,0,0,"T. Robinson"
+"2023-12-17T14:00:00+00:00",1702821600,"Gtech Community Stadium","FT","Brentford","Aston Villa",FALSE,1,2,1,0,"D. Coote"
+"2023-12-16T17:30:00+00:00",1702747800,"Turf Moor","FT","Burnley","Everton",FALSE,0,2,0,2,"A. Taylor"
+"2023-12-16T15:00:00+00:00",1702738800,"Stamford Bridge","FT","Chelsea","Sheffield Utd",TRUE,2,0,0,0,"A. Madley"
+"2023-12-17T16:30:00+00:00",1702830600,"Anfield","FT","Liverpool","Manchester United",NA,0,0,0,0,"M. Oliver"
+"2023-12-16T15:00:00+00:00",1702738800,"Etihad Stadium","FT","Manchester City","Crystal Palace",NA,2,2,1,0,"P. Tierney"
+"2023-12-16T15:00:00+00:00",1702738800,"St. James' Park","FT","Newcastle","Fulham",TRUE,3,0,0,0,"S. Barrott"
+"2023-12-15T20:00:00+00:00",1702670400,"The City Ground","FT","Nottingham Forest","Tottenham",FALSE,0,2,0,1,"J. Gillett"
+"2023-12-17T14:00:00+00:00",1702821600,"London Stadium","FT","West Ham","Wolves",TRUE,3,0,2,0,"C. Kavanagh"
+"2023-12-22T20:00:00+00:00",1703275200,"Villa Park","FT","Aston Villa","Sheffield Utd",NA,1,1,0,0,"A. Taylor"
+"2023-12-21T20:00:00+00:00",1703188800,"Selhurst Park","FT","Crystal Palace","Brighton",NA,1,1,1,0,"J. Brooks"
+"2023-12-23T15:00:00+00:00",1703343600,"Craven Cottage","FT","Fulham","Burnley",FALSE,0,2,0,0,"R. Welch"
+"2023-12-23T17:30:00+00:00",1703352600,"Anfield","FT","Liverpool","Arsenal",NA,1,1,1,1,"C. Kavanagh"
+"2023-12-23T15:00:00+00:00",1703343600,"Kenilworth Road","FT","Luton","Newcastle",TRUE,1,0,1,0,"D. England"
+"2024-02-20T19:30:00+00:00",1708457400,"Etihad Stadium","NS","Manchester City","Brentford",NA,NA,NA,NA,NA,NA
+"2023-12-23T15:00:00+00:00",1703343600,"The City Ground","FT","Nottingham Forest","Bournemouth",FALSE,2,3,0,0,"R. Jones"
+"2023-12-23T15:00:00+00:00",1703343600,"Tottenham Hotspur Stadium","FT","Tottenham","Everton",TRUE,2,1,2,0,"S. Attwell"
+"2023-12-23T12:30:00+00:00",1703334600,"London Stadium","FT","West Ham","Manchester United",TRUE,2,0,0,0,"S. Hooper"
+"2023-12-24T13:00:00+00:00",1703422800,"Molineux Stadium","FT","Wolves","Chelsea",TRUE,2,1,0,0,"D. Coote"
+"2023-12-26T15:00:00+00:00",1703602800,"Vitality Stadium","FT","Bournemouth","Fulham",TRUE,3,0,1,0,"T. Robinson"
+"2023-12-28T20:15:00+00:00",1703794500,"Emirates Stadium","FT","Arsenal","West Ham",FALSE,0,2,0,1,"M. Oliver"
+"2023-12-27T19:30:00+00:00",1703705400,"Gtech Community Stadium","FT","Brentford","Wolves",FALSE,1,4,1,3,"A. Madley"
+"2023-12-28T19:30:00+00:00",1703791800,"American Express Stadium","FT","Brighton","Tottenham",TRUE,4,2,2,0,"J. Gillett"
+"2023-12-26T17:30:00+00:00",1703611800,"Turf Moor","FT","Burnley","Liverpool",FALSE,0,2,0,1,"P. Tierney"
+"2023-12-27T19:30:00+00:00",1703705400,"Stamford Bridge","FT","Chelsea","Crystal Palace",TRUE,2,1,1,1,"M. Salisbury"
+"2023-12-27T20:15:00+00:00",1703708100,"Goodison Park","FT","Everton","Manchester City",FALSE,1,3,1,0,"J. Brooks"
+"2023-12-26T20:00:00+00:00",1703620800,"Old Trafford","FT","Manchester United","Aston Villa",TRUE,3,2,0,2,"C. Pawson"
+"2023-12-26T12:30:00+00:00",1703593800,"St. James' Park","FT","Newcastle","Nottingham Forest",FALSE,1,3,1,1,"C. Kavanagh"
+"2023-12-26T15:00:00+00:00",1703602800,"Bramall Lane","FT","Sheffield Utd","Luton",FALSE,2,3,0,1,"S. Allison"
+"2023-12-30T15:00:00+00:00",1703948400,"Villa Park","FT","Aston Villa","Burnley",TRUE,3,2,2,1,"S. Attwell"
+"2023-12-30T15:00:00+00:00",1703948400,"Selhurst Park","FT","Crystal Palace","Brentford",TRUE,3,1,2,1,"R. Jones"
+"2023-12-31T14:00:00+00:00",1704031200,"Craven Cottage","FT","Fulham","Arsenal",TRUE,2,1,1,1,"J. Smith"
+"2024-01-01T20:00:00+00:00",1704139200,"Anfield","FT","Liverpool","Newcastle",TRUE,4,2,0,0,"A. Taylor"
+"2023-12-30T12:30:00+00:00",1703939400,"Kenilworth Road","FT","Luton","Chelsea",FALSE,2,3,0,2,"P. Tierney"
+"2023-12-30T15:00:00+00:00",1703948400,"Etihad Stadium","FT","Manchester City","Sheffield Utd",TRUE,2,0,1,0,"D. Coote"
+"2023-12-30T17:30:00+00:00",1703957400,"The City Ground","FT","Nottingham Forest","Manchester United",TRUE,2,1,0,0,"T. Robinson"
+"2023-12-31T14:00:00+00:00",1704031200,"Tottenham Hotspur Stadium","FT","Tottenham","Bournemouth",TRUE,3,1,1,0,"S. Hooper"
+"2024-01-02T19:30:00+00:00",1704223800,"London Stadium","FT","West Ham","Brighton",NA,0,0,0,0,"S. Barrott"
+"2023-12-30T15:00:00+00:00",1703948400,"Molineux Stadium","FT","Wolves","Everton",TRUE,3,0,1,0,"T. Bramall"
+"2024-01-21T16:30:00+00:00",1705854600,"Vitality Stadium","FT","Bournemouth","Liverpool",FALSE,0,4,0,0,"A. Madley"
+"2024-01-20T12:30:00+00:00",1705753800,"Emirates Stadium","FT","Arsenal","Crystal Palace",TRUE,5,0,2,0,"P. Tierney"
+"2024-01-20T17:30:00+00:00",1705771800,"Gtech Community Stadium","FT","Brentford","Nottingham Forest",TRUE,3,2,1,1,"D. England"
+"2024-01-22T19:45:00+00:00",1705952700,"American Express Stadium","FT","Brighton","Wolves",NA,0,0,0,0,"C. Pawson"
+"2024-01-12T19:45:00+00:00",1705088700,"Turf Moor","FT","Burnley","Luton",NA,1,1,1,0,"T. Harrington"
+"2024-01-13T12:30:00+00:00",1705149000,"Stamford Bridge","FT","Chelsea","Fulham",TRUE,1,0,1,0,"A. Taylor"
+"2024-01-14T14:00:00+00:00",1705240800,"Goodison Park","FT","Everton","Aston Villa",NA,0,0,0,0,"D. Coote"
+"2024-01-14T16:30:00+00:00",1705249800,"Old Trafford","FT","Manchester United","Tottenham",NA,2,2,2,1,"J. Brooks"
+"2024-01-13T17:30:00+00:00",1705167000,"St. James' Park","FT","Newcastle","Manchester City",FALSE,2,3,2,1,"C. Kavanagh"
+"2024-01-21T14:00:00+00:00",1705845600,"Bramall Lane","FT","Sheffield Utd","West Ham",NA,2,2,1,1,"M. Salisbury"
+"2024-01-30T20:15:00+00:00",1706645700,"Villa Park","NS","Aston Villa","Newcastle",NA,NA,NA,NA,NA,"J. Brooks"
+"2024-01-30T19:45:00+00:00",1706643900,"Craven Cottage","NS","Fulham","Everton",NA,NA,NA,NA,NA,"T. Bramall"
+"2024-01-30T19:45:00+00:00",1706643900,"Kenilworth Road","NS","Luton","Brighton",NA,NA,NA,NA,NA,"R. Jones"
+"2024-01-30T19:30:00+00:00",1706643000,"The City Ground","NS","Nottingham Forest","Arsenal",NA,NA,NA,NA,NA,"S. Hooper"
+"2024-01-31T19:30:00+00:00",1706729400,"Tottenham Hotspur Stadium","NS","Tottenham","Brentford",NA,NA,NA,NA,NA,"D. Coote"
+"2024-02-01T19:30:00+00:00",1706815800,"London Stadium","NS","West Ham","Bournemouth",NA,NA,NA,NA,NA,"T. Robinson"
+"2024-02-01T20:15:00+00:00",1706818500,"Molineux Stadium","NS","Wolves","Manchester United",NA,NA,NA,NA,NA,"J. Gillett"
+"2024-01-30T20:00:00+00:00",1706644800,"Selhurst Park","NS","Crystal Palace","Sheffield Utd",NA,NA,NA,NA,NA,"T. Harrington"
+"2024-01-31T20:15:00+00:00",1706732100,"Anfield","NS","Liverpool","Chelsea",NA,NA,NA,NA,NA,"P. Tierney"
+"2024-01-31T19:30:00+00:00",1706729400,"Etihad Stadium","NS","Manchester City","Burnley",NA,NA,NA,NA,NA,"S. Barrott"
+"2024-02-04T14:00:00+00:00",1707055200,"Vitality Stadium","NS","Bournemouth","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-02-04T16:30:00+00:00",1707064200,"Emirates Stadium","NS","Arsenal","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-02-05T20:00:00+00:00",1707163200,"Gtech Community Stadium","NS","Brentford","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-02-03T15:00:00+00:00",1706972400,"American Express Stadium","NS","Brighton","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-02-03T15:00:00+00:00",1706972400,"Turf Moor","NS","Burnley","Fulham",NA,NA,NA,NA,NA,NA
+"2024-02-04T14:00:00+00:00",1707055200,"Stamford Bridge","NS","Chelsea","Wolves",NA,NA,NA,NA,NA,NA
+"2024-02-03T12:30:00+00:00",1706963400,"Goodison Park","NS","Everton","Tottenham",NA,NA,NA,NA,NA,NA
+"2024-02-04T14:00:00+00:00",1707055200,"Old Trafford","NS","Manchester United","West Ham",NA,NA,NA,NA,NA,NA
+"2024-02-03T15:00:00+00:00",1706972400,"St. James' Park","NS","Newcastle","Luton",NA,NA,NA,NA,NA,NA
+"2024-02-03T17:30:00+00:00",1706981400,"Bramall Lane","NS","Sheffield Utd","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-02-11T16:30:00+00:00",1707669000,"Villa Park","NS","Aston Villa","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-02-12T20:00:00+00:00",1707768000,"Selhurst Park","NS","Crystal Palace","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-02-10T15:00:00+00:00",1707577200,"Craven Cottage","NS","Fulham","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-02-10T15:00:00+00:00",1707577200,"Anfield","NS","Liverpool","Burnley",NA,NA,NA,NA,NA,NA
+"2024-02-10T15:00:00+00:00",1707577200,"Kenilworth Road","NS","Luton","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-02-10T12:30:00+00:00",1707568200,"Etihad Stadium","NS","Manchester City","Everton",NA,NA,NA,NA,NA,NA
+"2024-02-10T17:30:00+00:00",1707586200,"The City Ground","NS","Nottingham Forest","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-02-10T15:00:00+00:00",1707577200,"Tottenham Hotspur Stadium","NS","Tottenham","Brighton",NA,NA,NA,NA,NA,NA
+"2024-02-11T14:00:00+00:00",1707660000,"London Stadium","NS","West Ham","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-02-10T15:00:00+00:00",1707577200,"Molineux Stadium","NS","Wolves","Brentford",NA,NA,NA,NA,NA,NA
+"2024-02-17T12:30:00+00:00",1708173000,"Gtech Community Stadium","NS","Brentford","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-02-17T15:00:00+00:00",1708182000,"Turf Moor","NS","Burnley","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-02-19T20:00:00+00:00",1708372800,"Goodison Park","NS","Everton","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-02-17T15:00:00+00:00",1708182000,"Craven Cottage","NS","Fulham","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-02-18T16:30:00+00:00",1708273800,"Kenilworth Road","NS","Luton","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-02-17T17:30:00+00:00",1708191000,"Etihad Stadium","NS","Manchester City","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-02-17T15:00:00+00:00",1708182000,"St. James' Park","NS","Newcastle","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-02-17T15:00:00+00:00",1708182000,"The City Ground","NS","Nottingham Forest","West Ham",NA,NA,NA,NA,NA,NA
+"2024-02-18T14:00:00+00:00",1708264800,"Bramall Lane","NS","Sheffield Utd","Brighton",NA,NA,NA,NA,NA,NA
+"2024-02-17T15:00:00+00:00",1708182000,"Tottenham Hotspur Stadium","NS","Tottenham","Wolves",NA,NA,NA,NA,NA,NA
+"2024-02-24T17:30:00+00:00",1708795800,"Vitality Stadium","NS","Bournemouth","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-02-24T20:00:00+00:00",1708804800,"Emirates Stadium","NS","Arsenal","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-02-24T15:00:00+00:00",1708786800,"Villa Park","NS","Aston Villa","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-02-24T15:00:00+00:00",1708786800,"The American Express Community Stadium","NS","Brighton","Everton",NA,NA,NA,NA,NA,NA
+"2024-02-23T20:00:00+00:00",1708718400,"Stamford Bridge","TBD","Chelsea","Tottenham",NA,NA,NA,NA,NA,NA
+"2024-02-24T15:00:00+00:00",1708786800,"Selhurst Park","NS","Crystal Palace","Burnley",NA,NA,NA,NA,NA,NA
+"2024-02-24T15:00:00+00:00",1708786800,"Anfield","NS","Liverpool","Luton",NA,NA,NA,NA,NA,NA
+"2024-02-24T15:00:00+00:00",1708786800,"Old Trafford","NS","Manchester United","Fulham",NA,NA,NA,NA,NA,NA
+"2024-02-26T20:00:00+00:00",1708977600,"London Stadium","NS","West Ham","Brentford",NA,NA,NA,NA,NA,NA
+"2024-02-25T13:30:00+00:00",1708867800,"Molineux Stadium","NS","Wolves","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Gtech Community Stadium","NS","Brentford","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Turf Moor","NS","Burnley","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Goodison Park","NS","Everton","West Ham",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Craven Cottage","NS","Fulham","Brighton",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Kenilworth Road","NS","Luton","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Etihad Stadium","NS","Manchester City","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"St. James' Park","NS","Newcastle","Wolves",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"The City Ground","NS","Nottingham Forest","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Bramall Lane","NS","Sheffield Utd","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-03-02T15:00:00+00:00",1709391600,"Tottenham Hotspur Stadium","NS","Tottenham","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Vitality Stadium","NS","Bournemouth","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Emirates Stadium","NS","Arsenal","Brentford",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Villa Park","NS","Aston Villa","Tottenham",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"The American Express Community Stadium","NS","Brighton","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Stamford Bridge","NS","Chelsea","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Selhurst Park","NS","Crystal Palace","Luton",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Anfield","NS","Liverpool","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Old Trafford","NS","Manchester United","Everton",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"London Stadium","NS","West Ham","Burnley",NA,NA,NA,NA,NA,NA
+"2024-03-09T15:00:00+00:00",1709996400,"Molineux Stadium","NS","Wolves","Fulham",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Emirates Stadium","NS","Arsenal","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"The American Express Community Stadium","NS","Brighton","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Turf Moor","NS","Burnley","Brentford",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Selhurst Park","NS","Crystal Palace","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Goodison Park","NS","Everton","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Craven Cottage","NS","Fulham","Tottenham",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Kenilworth Road","NS","Luton","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Old Trafford","NS","Manchester United","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"London Stadium","NS","West Ham","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-03-16T15:00:00+00:00",1710601200,"Molineux Stadium","NS","Wolves","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Vitality Stadium","NS","Bournemouth","Everton",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Villa Park","NS","Aston Villa","Wolves",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Gtech Community Stadium","NS","Brentford","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Stamford Bridge","NS","Chelsea","Burnley",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Anfield","NS","Liverpool","Brighton",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Etihad Stadium","NS","Manchester City","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"St. James' Park","NS","Newcastle","West Ham",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"The City Ground","NS","Nottingham Forest","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Bramall Lane","NS","Sheffield Utd","Fulham",NA,NA,NA,NA,NA,NA
+"2024-03-30T14:00:00+00:00",1711807200,"Tottenham Hotspur Stadium","NS","Tottenham","Luton",NA,NA,NA,NA,NA,NA
+"2024-04-02T18:45:00+00:00",1712083500,"Vitality Stadium","NS","Bournemouth","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-04-02T18:45:00+00:00",1712083500,"Emirates Stadium","NS","Arsenal","Luton",NA,NA,NA,NA,NA,NA
+"2024-04-02T18:45:00+00:00",1712083500,"Gtech Community Stadium","NS","Brentford","Brighton",NA,NA,NA,NA,NA,NA
+"2024-04-02T18:45:00+00:00",1712083500,"Turf Moor","NS","Burnley","Wolves",NA,NA,NA,NA,NA,NA
+"2024-04-02T18:45:00+00:00",1712083500,"The City Ground","NS","Nottingham Forest","Fulham",NA,NA,NA,NA,NA,NA
+"2024-04-02T18:45:00+00:00",1712083500,"London Stadium","NS","West Ham","Tottenham",NA,NA,NA,NA,NA,NA
+"2024-04-03T18:45:00+00:00",1712169900,"Stamford Bridge","NS","Chelsea","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-04-03T18:45:00+00:00",1712169900,"St. James' Park","NS","Newcastle","Everton",NA,NA,NA,NA,NA,NA
+"2024-04-03T19:00:00+00:00",1712170800,"Anfield","NS","Liverpool","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-04-03T19:00:00+00:00",1712170800,"Etihad Stadium","NS","Manchester City","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Villa Park","NS","Aston Villa","Brentford",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"The American Express Community Stadium","NS","Brighton","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Selhurst Park","NS","Crystal Palace","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Goodison Park","NS","Everton","Burnley",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Craven Cottage","NS","Fulham","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Kenilworth Road","NS","Luton","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Old Trafford","NS","Manchester United","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Bramall Lane","NS","Sheffield Utd","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Tottenham Hotspur Stadium","NS","Tottenham","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-04-06T14:00:00+00:00",1712412000,"Molineux Stadium","NS","Wolves","West Ham",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"Vitality Stadium","NS","Bournemouth","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"Emirates Stadium","NS","Arsenal","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"Gtech Community Stadium","NS","Brentford","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"Turf Moor","NS","Burnley","Brighton",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"Stamford Bridge","NS","Chelsea","Everton",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"Anfield","NS","Liverpool","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"Etihad Stadium","NS","Manchester City","Luton",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"St. James' Park","NS","Newcastle","Tottenham",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"The City Ground","NS","Nottingham Forest","Wolves",NA,NA,NA,NA,NA,NA
+"2024-04-13T14:00:00+00:00",1713016800,"London Stadium","NS","West Ham","Fulham",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Villa Park","NS","Aston Villa","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"The American Express Community Stadium","NS","Brighton","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Selhurst Park","NS","Crystal Palace","West Ham",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Goodison Park","NS","Everton","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Craven Cottage","NS","Fulham","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Kenilworth Road","NS","Luton","Brentford",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Old Trafford","NS","Manchester United","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Bramall Lane","NS","Sheffield Utd","Burnley",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Tottenham Hotspur Stadium","NS","Tottenham","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-04-20T14:00:00+00:00",1713621600,"Molineux Stadium","NS","Wolves","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"Vitality Stadium","NS","Bournemouth","Brighton",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"Villa Park","NS","Aston Villa","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"Goodison Park","NS","Everton","Brentford",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"Craven Cottage","NS","Fulham","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"Old Trafford","NS","Manchester United","Burnley",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"St. James' Park","NS","Newcastle","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"The City Ground","NS","Nottingham Forest","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"Tottenham Hotspur Stadium","NS","Tottenham","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"London Stadium","NS","West Ham","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-04-27T14:00:00+00:00",1714226400,"Molineux Stadium","NS","Wolves","Luton",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Emirates Stadium","NS","Arsenal","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Gtech Community Stadium","NS","Brentford","Fulham",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"The American Express Community Stadium","NS","Brighton","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Turf Moor","NS","Burnley","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Stamford Bridge","NS","Chelsea","West Ham",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Selhurst Park","NS","Crystal Palace","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Anfield","NS","Liverpool","Tottenham",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Kenilworth Road","NS","Luton","Everton",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Etihad Stadium","NS","Manchester City","Wolves",NA,NA,NA,NA,NA,NA
+"2024-05-04T14:00:00+00:00",1714831200,"Bramall Lane","NS","Sheffield Utd","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"Vitality Stadium","NS","Bournemouth","Brentford",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"Villa Park","NS","Aston Villa","Liverpool",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"Goodison Park","NS","Everton","Sheffield Utd",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"Craven Cottage","NS","Fulham","Manchester City",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"Old Trafford","NS","Manchester United","Arsenal",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"St. James' Park","NS","Newcastle","Brighton",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"The City Ground","NS","Nottingham Forest","Chelsea",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"Tottenham Hotspur Stadium","NS","Tottenham","Burnley",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"London Stadium","NS","West Ham","Luton",NA,NA,NA,NA,NA,NA
+"2024-05-11T14:00:00+00:00",1715436000,"Molineux Stadium","NS","Wolves","Crystal Palace",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Emirates Stadium","NS","Arsenal","Everton",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Gtech Community Stadium","NS","Brentford","Newcastle",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"The American Express Community Stadium","NS","Brighton","Manchester United",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Turf Moor","NS","Burnley","Nottingham Forest",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Stamford Bridge","NS","Chelsea","Bournemouth",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Selhurst Park","NS","Crystal Palace","Aston Villa",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Anfield","NS","Liverpool","Wolves",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Kenilworth Road","NS","Luton","Fulham",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Etihad Stadium","NS","Manchester City","West Ham",NA,NA,NA,NA,NA,NA
+"2024-05-19T15:00:00+00:00",1716130800,"Bramall Lane","NS","Sheffield Utd","Tottenham",NA,NA,NA,NA,NA,NA
