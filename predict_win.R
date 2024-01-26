@@ -15,6 +15,7 @@ predict_win <- function(training_data, new_data, home_score, away_score, home_te
   # Train logistic regression model
   model_formula <- as.formula("Outcome ~ HomeTeam + AwayTeam + FT_ScoreHome + FT_scoreAway")
   model <- glm(model_formula, data = training_data, family = binomial)
+  summary(model)
   
   
   # Make predictions on new data
@@ -29,6 +30,11 @@ predict_win <- function(training_data, new_data, home_score, away_score, home_te
 training_data <- match_data[1:100, ]
 new_data <- match_data[101:211, ]
 
+training_data$HomeTeam <- as.factor(training_data$HomeTeam)
+training_data$AwayTeam <- as.factor(training_data$AwayTeam)
+
+new_data$HomeTeam <- as.factor(new_data$HomeTeam)
+new_data$AwayTeam <- as.factor(new_data$AwayTeam)
 
 # Specify column names
 home_score <- "FT_ScoreHome"
@@ -37,6 +43,9 @@ home_team <- "HomeTeam"
 away_team <- "AwayTeam"
 
 
+# Make predictions
+predictions <- predict_win(training_data, new_data, home_score, away_score, home_team, away_team)
+print(predictions)
 
 
 
