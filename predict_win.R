@@ -26,3 +26,18 @@ predict_win <- function(training_data, new_data, home_score, away_score, home_te
   return(new_data$PredictedOutcome)
 }
 
+training_data <- match_data[1:100, ]
+new_data <- match_data[101:211, ]
+
+
+# Specify column names
+home_score <- "FT_ScoreHome"
+away_score <- "FT_scoreAway"
+home_team <- "HomeTeam"
+away_team <- "AwayTeam"
+
+
+
+
+
+
