@@ -18,6 +18,9 @@ track_performance <- function(team_name) {
   # Create a new variable to represent the order of fixtures
   team_data$FixtureNumber <- seq_len(nrow(team_data))
   
+  # Filter data to include only rows with non-NA values in both 'FT_ScoreHome' and 'FT_scoreAway'
+  team_data <- team_data[complete.cases(team_data[, c('FT_ScoreHome', 'FT_scoreAway')]), ]
+  
   # Plotting
   ggplot(team_data, aes(x = FixtureNumber, 
                         y = ifelse(Location == "Home", FT_ScoreHome, FT_scoreAway),
