@@ -8,11 +8,14 @@ setwd("/Users/nats/DashKick_Analytics")
 match_data <- read.csv("match_data.csv")
 
 predict_win <- function() {
-  match_data$Home_Winner_Binary <- ifelse(is.na(match_data$Home_Winner), "Draw", ifelse(match_data$Home_Winner, "Win", "Defeat"))
+  soccer_data <- read.csv("match_data.csv")
+  soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
   
-  #match_data <- match_data[1:200, ]
-  # Create train and test data partitions
-  set.seed(123)  # Set seed for reproducibility
+  soccer_data <- soccer_data %>%
+    filter(Status == "FT")
+  
+  
+  set.seed(123)  
   train_index <- createDataPartition(match_data$Home_Winner_Binary, p = 0.8, list = FALSE)
   train_data <- match_data[train_index, ]
   test_data <- match_data[-train_index, ]
