@@ -1,51 +1,54 @@
 library(dplyr)
 library(caret)
+library(nnet)
 
 setwd("/Users/nats/DashKick_Analytics")
 
-# Load your dataset
+# Load your dataset 
 match_data <- read.csv("match_data.csv")
-match_data
 
-
-predict_win <- function(training_data, new_data, home_score, away_score, home_team, away_team) {
-  # Create a binary outcome variable (1 if home team wins, 0 otherwise)
-  training_data$Outcome <- ifelse(training_data[[home_score]] > training_data[[away_score]], 1, 0)
+predict_win <- function() {
+  match_data$Home_Winner_Binary <- ifelse(is.na(match_data$Home_Winner), "Draw", ifelse(match_data$Home_Winner, "Win", "Defeat"))
+  
+  #match_data <- match_data[1:200, ]
+  # Create train and test data partitions
+  set.seed(123)  # Set seed for reproducibility
+  train_index <- createDataPartition(match_data$Home_Winner_Binary, p = 0.8, list = FALSE)
+  train_data <- match_data[train_index, ]
+  test_data <- match_data[-train_index, ]
   
   # Train logistic regression model
-  model_formula <- as.formula("Outcome ~ HomeTeam + AwayTeam + FT_ScoreHome + FT_scoreAway")
-  model <- glm(model_formula, data = training_data, family = binomial)
-  summary(model)
-  
+  model_formula <- as.formula("Home_Winner_Binary ~ Stadium + FT_ScoreHome + FT_scoreAway + HT_ScoreHome + HT_scoreAway")
+  model <- multinom(model_formula, data = train_data)
   
   # Make predictions on new data
-  new_data$PredictedOutcome <- predict(model, newdata = new_data, type = "response")
+  predictions <- predict(model, newdata = test_data, type = "class")
   
   # Convert predicted probabilities to binary outcome
-  new_data$PredictedOutcome <- ifelse(new_data$PredictedOutcome > 0.5, 1, 0)
+  levels_to_use <- c("Draw", "Win", "Defeat")
+  test_data$Home_Winner_Binary <- factor(test_data$Home_Winner_Binary, levels = levels_to_use)
+  predictions <- factor(predictions, levels = levels_to_use)
+  test_data$PredictedOutcomes <- predictions
   
-  return(new_data$PredictedOutcome)
+  confusion_matrix <- confusionMatrix(predictions, test_data$Home_Winner_Binary)
+  print(confusion_matrix)
+  
+  # Extract values from confusion matrix
+  accuracy <- confusion_matrix$overall[1]  # Access the 'Accuracy' element
+  precision <- confusion_matrix$byClass[, "Precision"]
+  recall <- confusion_matrix$byClass[, "Recall"]
+  f1_score <- confusion_matrix$byClass[, "F1"]
+  
+  cat("\nAccuracy:", accuracy, "\n")
+  cat("Precision:", mean(precision, na.rm = TRUE), "\n")  # Use mean to handle possible NA values
+  cat("Recall:", mean(recall, na.rm = TRUE), "\n")  # Use mean to handle possible NA values
+  cat("F1 Score:", mean(f1_score, na.rm = TRUE), "\n")  # Use mean to handle possible NA values
+  
+  return(test_data)
 }
 
-training_data <- match_data[1:100, ]
-new_data <- match_data[101:211, ]
+match_outcomes <- predict_win()
 
-training_data$HomeTeam <- as.factor(training_data$HomeTeam)
-training_data$AwayTeam <- as.factor(training_data$AwayTeam)
-
-new_data$HomeTeam <- as.factor(new_data$HomeTeam)
-new_data$AwayTeam <- as.factor(new_data$AwayTeam)
-
-# Specify column names
-home_score <- "FT_ScoreHome"
-away_score <- "FT_scoreAway"
-home_team <- "HomeTeam"
-away_team <- "AwayTeam"
-
-
-# Make predictions
-predictions <- predict_win(training_data, new_data, home_score, away_score, home_team, away_team)
-print(predictions)
 
 
 
