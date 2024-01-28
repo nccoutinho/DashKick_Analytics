@@ -4,9 +4,6 @@ library(nnet)
 
 setwd("/Users/nats/DashKick_Analytics")
 
-# Load your dataset 
-match_data <- read.csv("match_data.csv")
-
 predict_win <- function() {
   soccer_data <- read.csv("match_data.csv")
   soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
