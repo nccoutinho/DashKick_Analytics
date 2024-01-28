@@ -27,7 +27,7 @@ track_performance <- function(team_name) {
                                 y = ifelse(Location == "Home", FT_ScoreHome, FT_scoreAway),
                                 color = Location,
                                 text = paste("Opponent: ", ifelse(Location == "Home", AwayTeam, HomeTeam),
-                                             "<br>Date: ", FixtureDate,
+                                             "<br>Date: ", substr(FixtureDate, 1, 10),
                                              "<br>Stadium: ", Stadium,
                                              "<br>Referee: ", Referee))) +
     geom_line(aes(group = Location), linewidth = 1) +
@@ -37,7 +37,8 @@ track_performance <- function(team_name) {
          y = "Goals Scored",
          color = "Location",
          shape = "Location") +
-    theme_minimal()
+    theme_minimal() +
+    guides(shape = 'none')
   
   # Convert ggplot object to plotly object for interactive features
   plotly::ggplotly(plot, tooltip = "text")
