@@ -30,7 +30,8 @@ for(page in 1:47)
     Goals = sapply(player_stats$statistics, function(stat) sum(stat$goals$total, na.rm = TRUE)),
     Assists = sapply(player_stats$statistics, function(stat) sum(stat$goals$assists, na.rm = TRUE)),
     YellowCards = sapply(player_stats$statistics, function(stat) sum(stat$cards$yellow, na.rm = TRUE)),
-    RedCards = sapply(player_stats$statistics, function(stat) sum(stat$cards$red, na.rm = TRUE))
+    RedCards = sapply(player_stats$statistics, function(stat) sum(stat$cards$red, na.rm = TRUE)),
+    Logo = sapply(player_stats$statistics, function(stat) (stat$team$logo[1]))
   )
   
   all_players <- rbind(rbind(all_players, df)
@@ -117,9 +118,9 @@ data <- data.frame(
 datatable(data, options = list(pageLength = 10))
 
 # Create a bar chart for goals and assists
-plot_ly(data, x = ~PlayerName, y = ~Goals, type = 'bar', name = 'Goals', marker = list(color = 'blue')) %>%
-  add_trace(y = ~Assists, name = 'Assists', marker = list(color = 'green')) %>%
+plot_ly(df, x = ~Goals, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'Goals', marker = list(color = 'purple')) %>%
+  add_trace(x = ~Assists, name = 'Assists', marker = list(color = 'lightblue')) %>%
   layout(title = 'Top Players - Goals and Assists',
-         xaxis = list(title = 'Players'),
-         yaxis = list(title = 'Count'),
-         barmode = 'stack')
+         xaxis = list(title = 'Count'),
+         yaxis = list(title = 'Players'),
+         barmode = 'stack') 
