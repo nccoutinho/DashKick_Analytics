@@ -6,43 +6,42 @@ setwd("/Users/nats/DashKick_Analytics")
 
 predict_win <- function() {
   soccer_data <- read.csv("match_data.csv")
+  soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
   soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
   
   soccer_data <- soccer_data %>%
     filter(Status == "FT")
   
+  soccer_data$Stadium <- as.factor(soccer_data$Stadium)
+  soccer_data$HomeTeam <- as.factor(soccer_data$HomeTeam)
+  soccer_data$AwayTeam <- as.factor(soccer_data$AwayTeam)
+  soccer_data$Referee <- as.factor(soccer_data$Referee)
+  
+  model_data <- soccer_data %>%
+    select(HomeTeam, AwayTeam, Stadium, Time, GoalDiff)
   
   set.seed(123)  
-  train_index <- createDataPartition(match_data$Home_Winner_Binary, p = 0.8, list = FALSE)
-  train_data <- match_data[train_index, ]
-  test_data <- match_data[-train_index, ]
+  train_index <- createDataPartition(model_data$GoalDiff, p = 0.8, list = FALSE)
+  train_data <- model_data[train_index, ]
+  test_data <- model_data[-train_index, ]
   
-  # Train logistic regression model
-  model_formula <- as.formula("Home_Winner_Binary ~ Stadium + FT_ScoreHome + FT_scoreAway + HT_ScoreHome + HT_scoreAway")
-  model <- multinom(model_formula, data = train_data)
+  lm_model <- lm(GoalDiff ~ ., data = train_data)
   
-  # Make predictions on new data
-  predictions <- predict(model, newdata = test_data, type = "class")
+  predictions_lm <- predict(lm_model, newdata = test_data)
   
-  # Convert predicted probabilities to binary outcome
-  levels_to_use <- c("Draw", "Win", "Defeat")
-  test_data$Home_Winner_Binary <- factor(test_data$Home_Winner_Binary, levels = levels_to_use)
-  predictions <- factor(predictions, levels = levels_to_use)
-  test_data$PredictedOutcomes <- predictions
+  predictions_lm <- round(predictions_lm)
   
-  confusion_matrix <- confusionMatrix(predictions, test_data$Home_Winner_Binary)
-  print(confusion_matrix)
+  accuracy <- mean(predictions_lm)
+  mse_lm <- mean((predictions_lm - test_data$GoalDiff)^2)
+  rmse_lm <- sqrt(mse_lm)
+  mae_lm <- mean(abs(predictions_lm - test_data$GoalDiff))
   
-  # Extract values from confusion matrix
-  accuracy <- confusion_matrix$overall[1]  # Access the 'Accuracy' element
-  precision <- confusion_matrix$byClass[, "Precision"]
-  recall <- confusion_matrix$byClass[, "Recall"]
-  f1_score <- confusion_matrix$byClass[, "F1"]
   
+  cat("Regression Metrics for Linear Regression model: ")
   cat("\nAccuracy:", accuracy, "\n")
-  cat("Precision:", mean(precision, na.rm = TRUE), "\n")  # Use mean to handle possible NA values
-  cat("Recall:", mean(recall, na.rm = TRUE), "\n")  # Use mean to handle possible NA values
-  cat("F1 Score:", mean(f1_score, na.rm = TRUE), "\n")  # Use mean to handle possible NA values
+  cat("Mean Squared Error (MSE):", mse_lm, "\n")
+  cat("Root Mean Squared Error (RMSE):", rmse_lm, "\n")
+  cat("Mean Absolute Error (MAE):", mae_lm, "\n")
   
   return(test_data)
 }
