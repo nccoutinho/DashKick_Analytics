@@ -2,6 +2,8 @@ library(httr)
 library(tidyjson)
 library(dplyr)
 library(jsonlite)
+library(DT)
+library(plotly)
 
 url <- "https://api-football-v1.p.rapidapi.com/v3/players"
 
@@ -48,28 +50,15 @@ all_players$NPG = all_players$Goals - all_players$PenaltyGoals
 
 df_ordered <- all_players[order(all_players$Assists, decreasing = TRUE), ]
 
-library(DT)
-library(shiny)
-
 df <- df_ordered[1:20, ]
 
 
 
-
-
-
-# Load libraries
-library(DT)
-library(plotly)
-
-
-# Create a DataTable
-
 # Create a bar chart for goals and assists
-plot_ly(df, x = ~NPG, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'Goals', marker = list(color = 'mediumpurple1')) %>%
+plot_ly(df, x = ~NPG, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'NPG', marker = list(color = 'mediumpurple1')) %>%
   add_trace(x = ~PenaltyGoals, name = 'Penalty Goals', marker = list(color = 'orangered')) %>%
   add_trace(x = ~Assists, name = 'Assists', marker = list(color = 'lightblue1')) %>%
   layout(title = 'Top Players - Goals and Assists',
-         xaxis = list(title = 'Count'),
-         yaxis = list(title = 'Players'),
+         xaxis = list(title = list(text = 'Count', font = list(family = 'Arial', size = 20), standoff = 20)),
+         yaxis = list(title = list(text = 'Players', position = 'top', font = list(family = 'Arial', size = 20), standoff = 5, tickangle = -45)),
          barmode = 'stack') 
