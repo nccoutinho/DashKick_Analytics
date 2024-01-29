@@ -9,6 +9,20 @@ predict_win <- function() {
   soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
   soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
   
+  soccer <- read.csv("stand_data.csv")
+  soccer_data <- soccer_data %>%
+    left_join(soccer %>% select(team, HP), by = c("HomeTeam" = "team"))
+  
+  soccer_data <- soccer_data %>%
+    left_join(soccer %>% select(team, AP), by = c("AwayTeam" = "team"))
+  
+  soccer_data <- soccer_data %>%
+    left_join(soccer %>% select(team, points), by = c("HomeTeam" = "team"))
+  
+  soccer_data <- soccer_data %>%
+    left_join(soccer %>% select(team, points), by = c("AwayTeam" = "team"))
+  
+  
   soccer_data <- soccer_data %>%
     filter(Status == "FT")
   
@@ -18,7 +32,7 @@ predict_win <- function() {
   soccer_data$Referee <- as.factor(soccer_data$Referee)
   
   model_data <- soccer_data %>%
-    select(HomeTeam, AwayTeam, Stadium, Time, GoalDiff)
+    select(HomeTeam, AwayTeam, Stadium, Time, GoalDiff, points.x, points.y, HP, AP)
   
   set.seed(123)  
   train_index <- createDataPartition(model_data$GoalDiff, p = 0.8, list = FALSE)
@@ -31,7 +45,17 @@ predict_win <- function() {
   
   predictions_lm <- round(predictions_lm)
   
-  accuracy <- mean(predictions_lm)
+  threshold <- 0
+  
+  test_data$Outcome <- ifelse(predictions_lm > threshold, "Win",
+                              ifelse(predictions_lm < threshold, "Loss", "Draw"))
+  
+  test_data$ActualOutcome <- ifelse(test_data$GoalDiff > threshold, "Win",
+                                    ifelse(test_data$GoalDiff < threshold, "Loss", "Draw"))
+  
+  
+  correct_predictions <- test_data$Outcome == test_data$ActualOutcome
+  accuracy <- mean(correct_predictions)
   mse_lm <- mean((predictions_lm - test_data$GoalDiff)^2)
   rmse_lm <- sqrt(mse_lm)
   mae_lm <- mean(abs(predictions_lm - test_data$GoalDiff))
