@@ -48,17 +48,35 @@ all_players
 all_players$GoalsAssists = all_players$Goals + all_players$Assists
 all_players$NPG = all_players$Goals - all_players$PenaltyGoals
 
-df_ordered <- all_players[order(all_players$Assists, decreasing = TRUE), ]
+df_ordered <- all_players[order(all_players$GoalsAssists, decreasing = TRUE), ]
 
 df <- df_ordered[1:20, ]
 
 
 
 # Create a bar chart for goals and assists
-plot_ly(df, x = ~NPG, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'NPG', marker = list(color = 'mediumpurple1')) %>%
-  add_trace(x = ~PenaltyGoals, name = 'Penalty Goals', marker = list(color = 'orangered')) %>%
-  add_trace(x = ~Assists, name = 'Assists', marker = list(color = 'lightblue1')) %>%
+plot_ly(df, x = ~NPG, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'NPG', marker = list(color = 'mediumpurple1'),
+        hovertemplate = '<b>%{y}</b><br>NPG: %{x}<extra><img src="%{Logo}" height="100" width="100"></extra>') %>%
+  add_trace(x = ~PenaltyGoals, name = 'Penalty Goals', marker = list(color = 'orangered'),
+            hovertemplate = '<b>%{y}</b><br>Penalty Goals: %{x}<extra><img src="%{Logo}" height="100" width="100"></extra>') %>%
+  add_trace(x = ~Assists, name = 'Assists', marker = list(color = 'lightblue1'),
+            hovertemplate = '<b>%{y}</b><br>Assists: %{x}<extra><img src="%{Logo}" height="100" width="100"></extra>') %>%
   layout(title = 'Top Players - Goals and Assists',
          xaxis = list(title = list(text = 'Count', font = list(family = 'Arial', size = 20), standoff = 20)),
          yaxis = list(title = list(text = 'Players', position = 'top', font = list(family = 'Arial', size = 20), standoff = 5, tickangle = -45)),
          barmode = 'stack') 
+
+
+plot_ly(df, x = ~NPG, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'NPG', marker = list(color = 'mediumpurple1'),
+        hovertemplate = '<b>%{y}</b><br>Age: %{customdata}<br>NPG: %{x}',
+        customdata = ~PlayerAge) %>%
+  add_trace(x = ~PenaltyGoals, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'Penalty Goals', marker = list(color = 'orangered'),
+            hovertemplate = '<b>%{y}</b><br>Age: %{customdata}<br>Penalty Goals: %{x}',
+            customdata = ~PlayerAge) %>%
+  add_trace(x = ~Assists, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'Assists', marker = list(color = 'lightblue1'),
+            hovertemplate = '<b>%{y}</b><br>Age: %{customdata}<br>Assists: %{x}',
+            customdata = ~PlayerAge) %>%
+  layout(title = 'Top Players - Goals and Assists',
+         xaxis = list(title = list(text = 'Count', font = list(family = 'Arial', size = 20), standoff = 20)),
+         yaxis = list(title = list(text = 'Players', position = 'top', font = list(family = 'Arial', size = 20), standoff = 5, tickangle = -45)),
+         barmode = 'stack')
