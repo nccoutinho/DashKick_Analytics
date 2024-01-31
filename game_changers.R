@@ -79,3 +79,20 @@ df_unique <- df_20 %>%
 show_bar <- top_20(df_unique)
 
 print(show_bar)
+
+
+library(testthat)
+
+test_that("top_20 returns a plot_ly object", {
+  df <- data.frame(
+    PlayerName = c("Player1", "Player2"),
+    Team = c("TeamA", "TeamB"),
+    Goals = c(10, 8),
+    Assists = c(5, 7),
+    GoalsAssists = c(15, 15)
+  )
+  
+  result <- top_20(df)
+  
+  expect_is(result, "plotly")
+})
