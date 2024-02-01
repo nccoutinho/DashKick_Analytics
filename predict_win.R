@@ -75,4 +75,15 @@ match_outcomes <- predict_win()
 predict_final_standings <- function(match_result) {
   standings <- match_result %>%
     group_by(Team = HomeTeam) %>%
-    
+    summarize(
+      Points = sum(case_when(
+        GoalDiff > 0 ~ 3,
+        GoalDiff == 0 ~ 1,
+        TRUE ~ 0
+      )),
+      GoalDifference = sum(GoalDiff)
+    ) 
+final_stand <- predict_final_standings(match_outcomes)
+
+
+
