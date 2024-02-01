@@ -79,5 +79,5 @@ track_performance <- function(team_name) {
   plotly::ggplotly(plot, tooltip = "text")
 }
 
-# Example usage:
+# Function call
 track_performance("Arsenal")
