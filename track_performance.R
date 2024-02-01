@@ -1,9 +1,17 @@
+# Install and load ggplot2 package
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+  install.packages("ggplot2")
+}
+library(ggplot2)
+
+# Install and load plotly package
+if (!requireNamespace("plotly", quietly = TRUE)) {
+  install.packages("plotly")
+}
+library(plotly)
+
 # Function to track team performance
 track_performance <- function(team_name) {
-  # Load necessary libraries
-  library(ggplot2)
-  library(plotly)
-  
   # Constant file path
   csv_file_path <- "/Users/christophermulya/Downloads/match_data.csv"
   

@@ -1,7 +1,31 @@
+# Install and load httr package
+if (!requireNamespace("httr", quietly = TRUE)) {
+  install.packages("httr")
+}
 library(httr)
+
+# Install and load jsonlite package
+if (!requireNamespace("jsonlite", quietly = TRUE)) {
+  install.packages("jsonlite")
+}
 library(jsonlite)
+
+# Install and load ggradar package
+if (!requireNamespace("ggradar", quietly = TRUE)) {
+  install.packages("ggradar")
+}
 library(ggradar)
+
+# Install and load tidyr package
+if (!requireNamespace("tidyr", quietly = TRUE)) {
+  install.packages("tidyr")
+}
 library(tidyr)
+
+# Install and load ggplot2 package
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+  install.packages("ggplot2")
+}
 library(ggplot2)
 
 compare_teams <- function(team1_name, team2_name) {
@@ -191,9 +215,3 @@ compare_teams <- function(team1_name, team2_name) {
 
 # Example usage:
 compare_teams("Arsenal", "Manchester United")
-
-
-
-
-
-
