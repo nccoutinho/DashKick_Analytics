@@ -25,12 +25,23 @@ predict_win <- function() {
   
   match_stats <- json_data$response
   
-  head(match_stats, 10)
+  #head(match_stats, 10)
+  
+  soccer_data <- data.frame(
+    FixtureDate = match_stats$fixture$date,
+    TimeStamp = match_stats$fixture$timestamp,
+    Status = match_stats$fixture$status$short,
+    HomeTeam = match_stats$teams$home$name,
+    AwayTeam = match_stats$teams$away$name,
+    FT_ScoreHome = match_stats$score$fulltime$home,
+    FT_scoreAway = match_stats$score$fulltime$away,
+    HT_ScoreHome = match_stats$score$halftime$home,
+    HT_scoreAway = match_stats$score$halftime$away,
+  )
   
   soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
   soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
   
-  soccer <- read.csv("stand_data.csv")
   soccer_data <- soccer_data %>%
     left_join(soccer %>% select(team, HP), by = c("HomeTeam" = "team"))
   
