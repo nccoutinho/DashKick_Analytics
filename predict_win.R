@@ -5,6 +5,7 @@ library(nnet)
 library(Metrics)
 library(knitr)
 library(kableExtra)
+library(httr)
 
 setwd("/Users/nats/DashKick_Analytics")
 
