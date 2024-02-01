@@ -6,7 +6,8 @@ library(Metrics)
 library(knitr)
 library(kableExtra)
 library(httr)
-
+library(jsonlite)
+library(tidyjson)
 
 
 predict_win <- function() {
@@ -23,7 +24,11 @@ predict_win <- function() {
   
   json_data <- fromJSON(json_string)
   
+  json_data <- fromJSON(json_string)
+  
   match_stats <- json_data$response
+  
+  
   
   #head(match_stats, 10)
   
@@ -42,37 +47,31 @@ predict_win <- function() {
     Referee = match_stats$fixture$referee
   )
   
-  soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
+ 
+  
   soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
-  
-  soccer_data <- soccer_data %>%
-    left_join(soccer %>% select(team, HP), by = c("HomeTeam" = "team"))
-  
-  soccer_data <- soccer_data %>%
-    left_join(soccer %>% select(team, AP), by = c("AwayTeam" = "team"))
-  
-  soccer_data <- soccer_data %>%
-    left_join(soccer %>% select(team, points), by = c("HomeTeam" = "team"))
-  
-  soccer_data <- soccer_data %>%
-    left_join(soccer %>% select(team, points), by = c("AwayTeam" = "team"))
-  
-  
-  soccer_data <- soccer_data %>%
-    filter(Status == "FT")
   
   soccer_data$Stadium <- as.factor(soccer_data$Stadium)
   soccer_data$HomeTeam <- as.factor(soccer_data$HomeTeam)
   soccer_data$AwayTeam <- as.factor(soccer_data$AwayTeam)
   soccer_data$Referee <- as.factor(soccer_data$Referee)
   
-  model_data <- soccer_data %>%
-    select(HomeTeam, AwayTeam, Stadium, Time, GoalDiff, points.x, points.y, HP, AP)
+  soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
   
-  set.seed(123)  
-  train_index <- createDataPartition(model_data$GoalDiff, p = 0.8, list = FALSE)
-  train_data <- model_data[train_index, ]
-  test_data <- model_data[-train_index, ]
+  next_data <- soccer_data  %>%
+    filter(Status != "FT")
+  
+  soccer_data <- soccer_data %>%
+    filter(Status == "FT")
+  
+  model_data <- soccer_data %>%
+    select(HomeTeam, AwayTeam, Stadium, Time, GoalDiff)
+  
+  set.seed(123)  # for reproducibility
+  split_index <- createDataPartition(model_data$GoalDiff, p = 0.8, list = FALSE)
+  train_data <- model_data[split_index, ]
+  test_data <- model_data[-split_index, ]
+  
   
   lm_model <- lm(GoalDiff ~ ., data = train_data)
   
@@ -88,21 +87,31 @@ predict_win <- function() {
   test_data$ActualOutcome <- ifelse(test_data$GoalDiff > threshold, "Win",
                                     ifelse(test_data$GoalDiff < threshold, "Loss", "Draw"))
   
-  
   correct_predictions <- test_data$Outcome == test_data$ActualOutcome
   accuracy <- mean(correct_predictions)
+  precision <- accuracy(predictions_lm, test_data$GoalDiff)
+  recall <- recall(predictions_lm, test_data$GoalDiff)
+  
   mse_lm <- mean((predictions_lm - test_data$GoalDiff)^2)
   rmse_lm <- sqrt(mse_lm)
   mae_lm <- mean(abs(predictions_lm - test_data$GoalDiff))
   
+  cat("\nAccuracy:", accuracy)
+  cat("\nPrecision:", precision)
+  cat("\nRecall:", recall, "\n")
+  cat("Regression Metrics for Linear Regression model:\n")
+  cat("Mean Squared Error (MSE):", mse_lm, "\n")
+  cat("Root Mean Squared Error (RMSE):", rmse_lm, "\n")
+  cat("Mean Absolute Error (MAE):", mae_lm, "\n")
   
-  #cat("Regression Metrics for Linear Regression model: ")
-  #cat("\nAccuracy:", accuracy, "\n")
-  #cat("Mean Squared Error (MSE):", mse_lm, "\n")
-  #cat("Root Mean Squared Error (RMSE):", rmse_lm, "\n")
-  #cat("Mean Absolute Error (MAE):", mae_lm, "\n")
+  predictions_next <- predict(lm_model, newdata = next_data)
   
-  return(test_data)
+  predictions_next <- round(predictions_next)
+  
+  next_data$GoalDiff <- predictions_next
+  
+  match_result <- rbind(soccer_data, next_data)
+  return(match_result)
 }
 
 match_outcomes <- predict_win()
@@ -117,7 +126,11 @@ predict_final_standings <- function() {
     league = "39")
   
   response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
+  
   json_string <- content(response, "text")
+  
+  json_data <- fromJSON(json_string)
+  
   standings <- json_data$response
   
   stand_df <- data.frame(
@@ -188,7 +201,7 @@ predict_final_standings <- function() {
   return(combined_standings)
 }
 
-final_stand <- predict_final_standings(match_outcomes)
+final_stand <- predict_final_standings()
 
 
 
