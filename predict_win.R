@@ -73,20 +73,27 @@ predict_win <- function() {
 match_outcomes <- predict_win()
 
 predict_final_standings <- function(match_result) {
-  standings <- match_result %>%
-    group_by(Team = HomeTeam) %>%
-    summarize(
-      Points = sum(case_when(
-        GoalDiff > 0 ~ 3,
-        GoalDiff == 0 ~ 1,
-        TRUE ~ 0
-      )),
-      GoalDifference = sum(GoalDiff)
-    ) %>%
-    arrange(desc(Points), desc(GoalDifference)) %>%
-    mutate(Position = row_number())
+  url <- "https://api-football-v1.p.rapidapi.com/v3/standings"
   
-  return (standings)
+  queryString <- list(
+    season = "2023",
+    league = "39")
+  
+  response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
+  json_string <- content(response, "text")
+  standings <- json_data$response
+  
+  stand_df <- data.frame(
+    rank = standings$league$standings[[1]][[1]]$rank,
+    team = standings$league$standings[[1]][[1]]$team$name,
+    points = standings$league$standings[[1]][[1]]$points,
+    MP = standings$league$standings[[1]][[1]]$all$played,
+    Wins = standings$league$standings[[1]][[1]]$all$win,
+    HomePlayed = standings$league$standings[[1]][[1]]$home$played,
+    HomeWin = standings$league$standings[[1]][[1]]$home$win,
+    AwayPlayed = standings$league$standings[[1]][[1]]$away$played,
+    AwayWin = standings$league$standings[[1]][[1]]$away$win
+  )
 }
 
 final_stand <- predict_final_standings(match_outcomes)
