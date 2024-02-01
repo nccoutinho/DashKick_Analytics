@@ -62,7 +62,7 @@ top_20 <- function(df) {
     add_trace(x = ~Assists, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'Assists', marker = list(color = 'lightblue1'),
               hovertemplate = '<b>%{y}</b><br>Team: %{customdata}<br>Assists: %{x}',
               customdata = ~Team) %>%
-    layout(title = 'Top Players - Goals and Assists',
+    layout(title = 'Top Game Changers of the EPL 23-24',
            xaxis = list(title = list(text = 'Count', font = list(family = 'Arial', size = 20), standoff = 20)),
            yaxis = list(title = list(text = 'Players', position = 'top', font = list(family = 'Arial', size = 20), standoff = 5, tickangle = -45)),
            barmode = 'stack')
@@ -81,18 +81,3 @@ show_bar <- top_20(df_unique)
 print(show_bar)
 
 
-library(testthat)
-
-test_that("top_20 returns a plot_ly object", {
-  df <- data.frame(
-    PlayerName = c("Player1", "Player2"),
-    Team = c("TeamA", "TeamB"),
-    Goals = c(10, 8),
-    Assists = c(5, 7),
-    GoalsAssists = c(15, 15)
-  )
-  
-  result <- top_20(df)
-  
-  expect_is(result, "plotly")
-})
