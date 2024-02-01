@@ -72,7 +72,7 @@ predict_win <- function() {
 
 match_outcomes <- predict_win()
 
-
-
-
-
+predict_final_standings <- function(match_result) {
+  standings <- match_result %>%
+    group_by(Team = HomeTeam) %>%
+    
