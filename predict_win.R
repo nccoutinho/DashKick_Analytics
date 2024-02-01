@@ -96,13 +96,13 @@ predict_win <- function() {
   rmse_lm <- sqrt(mse_lm)
   mae_lm <- mean(abs(predictions_lm - test_data$GoalDiff))
   
-  cat("\nAccuracy:", accuracy)
-  cat("\nPrecision:", precision)
-  cat("\nRecall:", recall, "\n")
-  cat("Regression Metrics for Linear Regression model:\n")
-  cat("Mean Squared Error (MSE):", mse_lm, "\n")
-  cat("Root Mean Squared Error (RMSE):", rmse_lm, "\n")
-  cat("Mean Absolute Error (MAE):", mae_lm, "\n")
+  # cat("\nAccuracy:", accuracy)
+  # cat("\nPrecision:", precision)
+  # cat("\nRecall:", recall, "\n")
+  # cat("Regression Metrics for Linear Regression model:\n")
+  # cat("Mean Squared Error (MSE):", mse_lm, "\n")
+  # cat("Root Mean Squared Error (RMSE):", rmse_lm, "\n")
+  # cat("Mean Absolute Error (MAE):", mae_lm, "\n")
   
   predictions_next <- predict(lm_model, newdata = next_data)
   
