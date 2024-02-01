@@ -76,7 +76,9 @@ predict_win <- function() {
 
 match_outcomes <- predict_win()
 
-predict_final_standings <- function(match_result) {
+predict_final_standings <- function() {
+  match_result <- predict_win()
+  
   url <- "https://api-football-v1.p.rapidapi.com/v3/standings"
   
   queryString <- list(
