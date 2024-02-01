@@ -120,6 +120,35 @@ predict_final_standings <- function(match_result) {
     ) %>%
     arrange(desc(Points_Away), desc(GoalDifference_Away)) %>%
     mutate(Position_Away = row_number())
+  
+  combined_standings <- bind_rows(home_standings, away_standings) %>%
+    group_by(Team) %>%
+    summarize(
+      Points = sum(coalesce(Points_Home, 0), coalesce(Points_Away, 0)),
+      Goal_Difference = sum(coalesce(GoalDifference_Home, 0), coalesce(GoalDifference_Away, 0))
+    ) %>%
+    arrange(desc(Points), desc(Goal_Difference)) %>%
+    mutate(Position = row_number())
+  combined_standings <- combined_standings[, c("Position", setdiff(names(combined_standings), "Position"))]
+  
+  combined_standings <- combined_standings %>%
+    left_join(stand_df %>% select(team, rank), by = c("Team" = "team"))
+  
+  combined_standings$Position_Displacement = combined_standings$rank - combined_standings$Position
+  combined_standings <- combined_standings %>% select(-rank)
+  
+  df_colors <- transform(combined_standings, Color = ifelse(Position %in% c(1:4), "seagreen", ifelse(Position == 5, "#ccffcc", ifelse(Position %in% c(18:20), "firebrick1", "white"))))
+  
+  league_table <- kable(df_colors[, -ncol(df_colors)], "html") %>%
+    kable_styling("striped", full_width = FALSE) %>%
+    row_spec(which(df_colors$Color == "seagreen"), background = "seagreen") %>%
+    row_spec(which(df_colors$Color == "#ccffcc"), background = "#ccffcc") %>%
+    row_spec(which(df_colors$Color == "firebrick1"), background = "firebrick1") %>%
+    row_spec(1, extra_css = "font-weight:bold;")
+  
+  print(league_table)
+  
+  return(combined_standings)
 }
 
 final_stand <- predict_final_standings(match_outcomes)
