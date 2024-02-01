@@ -1,6 +1,10 @@
 library(dplyr)
+library(tidyr)
 library(caret)
 library(nnet)
+library(Metrics)
+library(knitr)
+library(kableExtra)
 
 setwd("/Users/nats/DashKick_Analytics")
 
