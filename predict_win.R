@@ -7,10 +7,26 @@ library(knitr)
 library(kableExtra)
 library(httr)
 
-setwd("/Users/nats/DashKick_Analytics")
+
 
 predict_win <- function() {
-  soccer_data <- read.csv("match_data.csv")
+  url <- "https://api-football-v1.p.rapidapi.com/v3/fixtures"
+  
+  queryString <- list(
+    league = "39",
+    season = "2023"
+  )
+  
+  response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
+  
+  json_string <- content(response, "text")
+  
+  json_data <- fromJSON(json_string)
+  
+  match_stats <- json_data$response
+  
+  head(match_stats, 10)
+  
   soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
   soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
   
