@@ -82,7 +82,13 @@ predict_final_standings <- function(match_result) {
         TRUE ~ 0
       )),
       GoalDifference = sum(GoalDiff)
-    ) 
+    ) %>%
+    arrange(desc(Points), desc(GoalDifference)) %>%
+    mutate(Position = row_number())
+  
+  return (standings)
+}
+
 final_stand <- predict_final_standings(match_outcomes)
 
 
