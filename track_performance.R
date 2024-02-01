@@ -12,11 +12,38 @@ library(plotly)
 
 # Function to track team performance
 track_performance <- function(team_name) {
-  # Constant file path
-  csv_file_path <- "/Users/christophermulya/Downloads/match_data.csv"
+  url <- "https://api-football-v1.p.rapidapi.com/v3/fixtures"
   
-  # Read the CSV file
-  fixtures <- read.csv(csv_file_path)
+  queryString <- list(
+    league = "39",
+    season = "2023"
+  )
+  
+  response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
+  
+  
+  json_string <- content(response, "text")
+  
+  json_data <- fromJSON(json_string)
+  
+  match_stats <- json_data$response
+  
+  head(match_stats, 10)
+  
+  fixtures <- data.frame(
+    FixtureDate = match_stats$fixture$date,
+    TimeStamp = match_stats$fixture$timestamp,
+    Stadium = match_stats$fixture$venue$name,
+    Status = match_stats$fixture$status$short,
+    HomeTeam = match_stats$teams$home$name,
+    AwayTeam = match_stats$teams$away$name,
+    Home_Winner = match_stats$teams$home$winner,
+    FT_ScoreHome = match_stats$score$fulltime$home,
+    FT_scoreAway = match_stats$score$fulltime$away,
+    HT_ScoreHome = match_stats$score$halftime$home,
+    HT_scoreAway = match_stats$score$halftime$away,
+    Referee = match_stats$fixture$referee
+  )
   
   # Filter data for the specified team
   team_data <- fixtures[fixtures$HomeTeam == team_name | fixtures$AwayTeam == team_name, ]
