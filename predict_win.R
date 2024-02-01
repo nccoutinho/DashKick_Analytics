@@ -30,13 +30,16 @@ predict_win <- function() {
   soccer_data <- data.frame(
     FixtureDate = match_stats$fixture$date,
     TimeStamp = match_stats$fixture$timestamp,
+    Stadium = match_stats$fixture$venue$name,
     Status = match_stats$fixture$status$short,
     HomeTeam = match_stats$teams$home$name,
     AwayTeam = match_stats$teams$away$name,
+    Home_Winner = match_stats$teams$home$winner,
     FT_ScoreHome = match_stats$score$fulltime$home,
     FT_scoreAway = match_stats$score$fulltime$away,
     HT_ScoreHome = match_stats$score$halftime$home,
     HT_scoreAway = match_stats$score$halftime$away,
+    Referee = match_stats$fixture$referee
   )
   
   soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
