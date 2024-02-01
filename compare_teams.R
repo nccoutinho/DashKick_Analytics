@@ -2,39 +2,37 @@ library(httr)
 library(jsonlite)
 library(ggradar)
 library(tidyr)
+library(ggplot2)
 
 compare_teams <- function(team1_name, team2_name) {
   # Dictionary of team names and their IDs
   team_id_dict <- list(
     "Manchester United" = 33,
-    "Newcastle" = 34,
+    "Aston Villa" = 66,
     "Bournemouth" = 35,
     "Fulham" = 36,
-    "Huddersfield" = 37,
-    "Watford" = 38,
+    "Newcastle" = 37,
+    "Brentford" = 55,
     "Wolves" = 39,
     "Liverpool" = 40,
-    "Southampton" = 41,
+    "Nottingham Forest" = 65,
     "Arsenal" = 42,
     "Burnley" = 44,
     "Everton" = 45,
-    "Leicester" = 46,
     "Tottenham" = 47,
     "West Ham" = 48,
     "Chelsea" = 49,
     "Manchester City" = 50,
     "Brighton" = 51,
-    "Crystal Palace" = 52
+    "Crystal Palace" = 52,
+    "Luton" = 1359,
+    "Sheffield Utd" = 62
   )
   
   # Function to get team ID from the dictionary
   get_team_id <- function(team_name) {
     return(team_id_dict[[team_name]])
   }
-  
-  # Example usage
-  team1_name <- "Arsenal"
-  team2_name <- "Manchester City"
   
   # Get team IDs
   team1_id <- get_team_id(team1_name)
@@ -98,16 +96,14 @@ compare_teams <- function(team1_name, team2_name) {
   team1_df <- create_team_df(team1_stats)
   team2_df <- create_team_df(team2_stats)
   
-  metrics <- c("FixturesPlayedHome", "FixturesPlayedAway", 
-               "FixturesWinsHome", "FixturesWinsAway", 
+  metrics <- c("FixturesWinsHome", "FixturesWinsAway", 
                "FixturesDrawsHome", "FixturesDrawsAway", 
                "FixtureLosesHome", "FixtureLosesAway", 
                "GoalsForAvgHome", "GoalsForAvgAway", 
                "GoalsAgainstAvgHome", "GoalsAgainstAvgAway", 
                "FailedToScoreHome", "FailedToScoreAway")
   
-  total_columns <- c("FixturesPlayedTotal", "FixturesPlayedTotal", 
-                     "FixturesWinsTotal", "FixturesWinsTotal", 
+  total_columns <- c("FixturesWinsTotal", "FixturesWinsTotal", 
                      "FixturesDrawsTotal", "FixturesDrawsTotal", 
                      "FixtureLosesTotal", "FixtureLosesTotal", 
                      "GoalsForAvgTotal", "GoalsForAvgTotal", 
@@ -128,23 +124,15 @@ compare_teams <- function(team1_name, team2_name) {
   # Calculate percentages based on the total columns (Team 2)
   team2_metrics_percent <- as.data.frame(apply(team2_metrics, 1, function(row) row / team2_totals))
   
-  # Manually assign new variable names
-  new_names <- c("FixPlayedHome_Percent", "FixPlayedAway_Percent", 
-                 "WinsHome_Percent", "WinsAway_Percent", 
-                 "DrawsHome_Percent", "DrawsAway_Percent", 
-                 "LosesHome_Percent", "LosesAway_Percent", 
-                 "GoalsForAvgHome_Percent", "GoalsForAvgAway_Percent", 
-                 "GoalsAgainstAvgHome_Percent", "GoalsAgainstAvgAway_Percent", 
-                 "FailedToScoreHome_Percent", "FailedToScoreAway_Percent")
-  
-  # Assign new variable names to the columns (Team 1)
-  colnames(team1_metrics_percent) <- new_names
-  
-  # Assign new variable names to the columns (Team 2)
-  colnames(team2_metrics_percent) <- new_names
-  
   # Transpose the data for plotting (Team 1)
   radar_data_1 <- t(team1_metrics_percent)
+  
+  # Shorter variable names for plotting
+  metric_names <- c("WinsHome",
+                    "WinsAway", "DrawsHome", "DrawsAway",
+                    "LosesHome", "LosesAway", "GoalsForHome",
+                    "GoalsForAway", "GoalsAgainstHome", "GoalsAgainstAway",
+                    "NoGoalsHome", "NoGoalsAway")
   
   # Create a data frame for plotting (Team 1)
   radar_df_1 <- data.frame(
@@ -181,14 +169,20 @@ compare_teams <- function(team1_name, team2_name) {
   combined_df <- rbind(new_df_1, new_df_2)
   
   # Add the "Team" column with values
-  combined_df$Team <- c("Team 1", "Team 2")
+  combined_df$Team <- c(team1_name, team2_name)
   
   # Reorder the columns to have "Team" as the first column
   combined_df <- combined_df[, c("Team", names(combined_df)[-ncol(combined_df)])]
   
   # Create the spider plot
-  spider_plot <- ggradar(combined_df, legend.title = "Team",
-                         legend.position = "bottom")
+  spider_plot <- ggradar(combined_df,
+                         group.line.width = 1, 
+                         group.point.size = 3,
+                         group.colours = c("#00AFBB", "#FC4E07"),
+                         axis.label.size = 2.5, grid.label.size = 4, 
+                         legend.text.size = 10,
+                         legend.position = "bottom") +
+    ggtitle("Comparison of Team Performance") + theme(plot.title = element_text(size = 13))
   
   # Print the spider plot
   print(spider_plot)
@@ -197,8 +191,6 @@ compare_teams <- function(team1_name, team2_name) {
 
 # Example usage:
 compare_teams("Arsenal", "Manchester United")
-
-
 
 
 
