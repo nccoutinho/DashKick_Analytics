@@ -66,11 +66,11 @@ predict_win <- function() {
   mae_lm <- mean(abs(predictions_lm - test_data$GoalDiff))
   
   
-  cat("Regression Metrics for Linear Regression model: ")
-  cat("\nAccuracy:", accuracy, "\n")
-  cat("Mean Squared Error (MSE):", mse_lm, "\n")
-  cat("Root Mean Squared Error (RMSE):", rmse_lm, "\n")
-  cat("Mean Absolute Error (MAE):", mae_lm, "\n")
+  #cat("Regression Metrics for Linear Regression model: ")
+  #cat("\nAccuracy:", accuracy, "\n")
+  #cat("Mean Squared Error (MSE):", mse_lm, "\n")
+  #cat("Root Mean Squared Error (RMSE):", rmse_lm, "\n")
+  #cat("Mean Absolute Error (MAE):", mae_lm, "\n")
   
   return(test_data)
 }
