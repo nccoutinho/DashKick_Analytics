@@ -94,6 +94,19 @@ predict_final_standings <- function(match_result) {
     AwayPlayed = standings$league$standings[[1]][[1]]$away$played,
     AwayWin = standings$league$standings[[1]][[1]]$away$win
   )
+  
+  home_standings <- match_result %>%
+    group_by(Team = HomeTeam) %>%
+    summarize(
+      Points_Home = sum(case_when(
+        GoalDiff > 0 ~ 3,
+        GoalDiff == 0 ~ 1,
+        TRUE ~ 0
+      )),
+      GoalDifference_Home = sum(GoalDiff)
+    ) %>%
+    arrange(desc(Points_Home), desc(GoalDifference_Home)) %>%
+    mutate(Position_Home = row_number())
 }
 
 final_stand <- predict_final_standings(match_outcomes)
