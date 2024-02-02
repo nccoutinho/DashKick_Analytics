@@ -320,6 +320,7 @@ track_performance <- function(team_name) {
 #'
 #'
 #' @keywords internal
+#' @export
 top_20 <- function(df) {
   show_bar <- plot_ly(df, x = ~Goals, y = ~reorder(PlayerName, GoalsAssists), type = 'bar', name = 'Goals', marker = list(color = 'mediumpurple1'),
                       hovertemplate = '<b>%{y}</b><br>Team: %{customdata}<br>Goals: %{x}',
