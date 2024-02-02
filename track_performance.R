@@ -81,3 +81,33 @@ track_performance <- function(team_name) {
 
 # Function call
 track_performance("Arsenal")
+
+library(testthat)
+
+test_that("track_performance function returns a plotly object with correct attributes", {
+  # Use example team
+  team_name <- "Arsenal"
+  
+  # Run the function
+  track_performance_result <- track_performance(team_name)
+  
+  # Check if the result is a plotly object
+  expect_is(track_performance_result, "plotly")
+  
+  # Check if layout is not NULL
+  expect_false(is.null(track_performance_result$x$layout), "The layout should not be NULL")
+  
+  # Check if certain elements are present within the layout
+  expect_true("title" %in% names(track_performance_result$x$layout),
+              "Title should be present in layout")
+  
+  expect_true("xaxis" %in% names(track_performance_result$x$layout),
+              "xaxis should be present in layout")
+  
+  expect_true("yaxis" %in% names(track_performance_result$x$layout),
+              "yaxis should be present in layout")
+  
+  expect_true("legend" %in% names(track_performance_result$x$layout),
+              "legend should be present in layout")
+  
+})
