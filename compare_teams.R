@@ -215,3 +215,22 @@ compare_teams <- function(team1_name, team2_name) {
 
 # Example usage:
 compare_teams("Arsenal", "Manchester United")
+
+library(testthat)
+
+test_that("compare_teams function returns a ggradar object with correct attributes", {
+  # Use example teams
+  team1_name <- "Arsenal"
+  team2_name <- "Manchester United"
+  
+  # Run the function
+  compare_teams_result <- compare_teams(team1_name, team2_name)
+  
+  # Check if the result is a ggplot object
+  expect_true(inherits(compare_teams_result, "gg"),
+              "Result should be a ggplot object")
+  
+  # Check if the title is present
+  expect_true("title" %in% names(compare_teams_result$labels),
+              "Title should be present in ggplot object")
+})
