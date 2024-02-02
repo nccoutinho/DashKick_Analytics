@@ -9,7 +9,7 @@ library(dplyr)
 library(jsonlite)
 library(DT)
 library(plotly)
-
+library(dashkickAnalytics)
 # Turned on mocks
 httr_mock(on = TRUE)
 

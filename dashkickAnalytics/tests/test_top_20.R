@@ -1,5 +1,7 @@
 library(testthat)
 library(plotly)
+library(dashkickAnalytics)
+
 
 test_that("top_20 produces a valid plot", {
   # Creating some dummy data for testing
