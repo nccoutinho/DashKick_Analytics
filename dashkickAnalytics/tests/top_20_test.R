@@ -1,3 +1,6 @@
+library(testthat)
+library(plotly)
+
 test_that("top_20 produces a valid plot", {
   # Creating some dummy data for testing
   dummy_data <- data.frame(
