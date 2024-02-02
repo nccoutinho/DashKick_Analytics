@@ -15,3 +15,7 @@ content(response, "text")
 library(dashkickAnalytics)
 
 match_result <- predict_win()
+
+track_performance('Arsenal')
+
+compare_teams('Arsenal', 'Liverpool')
