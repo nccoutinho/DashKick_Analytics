@@ -16,13 +16,11 @@ game_changers <- function() {
       season = "2023",
       page = page
     )
-    
+
     response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
-    
-    json_string <- content(response, "text")
-    
+    json_string <- content(response, "text", encoding='UTF-8')
+    print(json_string)
     json_data <- fromJSON(json_string)
-    
     player_stats <- json_data$response
     
     df <- data.frame(
@@ -45,11 +43,11 @@ game_changers <- function() {
   df_unique <- df_ordered %>%
     distinct(PlayerName, .keep_all = TRUE)
   
-  df_20 <- df_unique[1:20, ]
-  
-  show_bar <- top_20(df_20)
-  
-  print(show_bar)
+  suppressWarnings({
+    df_20 <- df_unique[1:20, ]
+    show_bar <- top_20(df_20)
+    print(show_bar)
+  })
   
   return (df_20)
 }
