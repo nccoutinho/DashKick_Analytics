@@ -66,17 +66,27 @@ compare_teams <- function(team1_name, team2_name) {
   get_team_stats <- function(team_id) {
     url <- "https://api-football-v1.p.rapidapi.com/v3/teams/statistics"
     query <- list(league = "39", season = "2023", team = team_id)
-    response <- VERB("GET", url, query = query, 
-                     add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 
-                                 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'),
-                     content_type("application/octet-stream"))
     
-    # Convert response to JSON
-    json_string <- content(response, "text")
-    json_data <- fromJSON(json_string)
-    team_stats <- json_data$response
-    
-    return(team_stats)
+    tryCatch(
+      {
+        response <- VERB("GET", url, query = query, 
+                         add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 
+                                     'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'),
+                         content_type("application/octet-stream"))
+        
+        # Convert response to JSON
+        json_string <- content(response, "text")
+        json_data <- fromJSON(json_string)
+        team_stats <- json_data$response
+        
+        return(team_stats)
+      },
+      error = function(e) {
+        cat("Error in get_team_stats:", conditionMessage(e), "\n")
+        # You can choose how to handle errors here, e.g., return a default or empty result
+        return(NULL)
+      }
+    )
   }
   
   # Get team statistics for both teams
@@ -233,4 +243,20 @@ test_that("compare_teams function returns a ggradar object with correct attribut
   # Check if the title is present
   expect_true("title" %in% names(compare_teams_result$labels),
               "Title should be present in ggplot object")
+  
+  # Check if 'line' is present in the theme
+  expect_true("line" %in% names(compare_teams_result$theme),
+              "Line should be present in the theme")
+  
+  # Check if 'rect' is present in the theme
+  expect_true("rect" %in% names(compare_teams_result$theme),
+              "Rect should be present in the theme")
+  
+  # Check if 'colour' is present in 'line'
+  expect_true("colour" %in% names(compare_teams_result$theme$line),
+              "Colour should be present in line")
+  
+  # Check if 'fill' is present in 'rect'
+  expect_true("fill" %in% names(compare_teams_result$theme$rect),
+              "Fill should be present in rect")
 })
