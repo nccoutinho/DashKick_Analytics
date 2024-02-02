@@ -2,6 +2,7 @@
 
 export(compare_teams)
 export(game_changers)
+export(predict_final_standings)
 export(predict_win)
 export(track_performance)
 import(DT)

@@ -63,7 +63,7 @@ compare_teams <- function(team1_name, team2_name) {
                          content_type("application/octet-stream"))
         
         # Convert response to JSON
-        json_string <- content(response, "text")
+        json_string <- content(response, "text", encoding='UTF-8')
         json_data <- fromJSON(json_string)
         team_stats <- json_data$response
         
@@ -242,7 +242,7 @@ track_performance <- function(team_name) {
   response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
   
   
-  json_string <- content(response, "text")
+  json_string <- content(response, "text", encoding='UTF-8')
   
   json_data <- fromJSON(json_string)
   

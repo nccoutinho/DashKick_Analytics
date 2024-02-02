@@ -19,3 +19,8 @@ match_result <- predict_win()
 track_performance('Arsenal')
 
 compare_teams('Arsenal', 'Liverpool')
+
+compare_teams('Liverpool', 'Manchester United')
+
+league <- predict_final_standings()
+
