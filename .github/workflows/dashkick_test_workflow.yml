@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        r-version: [4.0.5]
+        r-version: [4.1.0]
 
     env:
       R_VERSION: ${{ matrix.r-version }}
