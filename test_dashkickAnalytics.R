@@ -11,10 +11,10 @@ library(DT)
 library(plotly)
 
 httr_mock(on = FALSE)
-source("C:/Users/prana/Documents/MDS/DashKick_Analytics/predict_win.R")
-source("C:/Users/prana/Documents/MDS/DashKick_Analytics/compare_teams.R")
-source("C:/Users/prana/Documents/MDS/DashKick_Analytics/track_performance.R")
-source("C:/Users/prana/Documents/MDS/DashKick_Analytics/game_changers.R")
+source("predict_win.R")
+source("compare_teams.R")
+source("track_performance.R")
+source("game_changers.R")
 
 test_that("compare_teams function returns a ggradar object with correct attributes", {
   # Use example teams
