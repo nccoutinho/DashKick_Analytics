@@ -38,8 +38,9 @@ jobs:
       
     - name: Set up package
       run: |
-        R -e "install.packages(c('testthat', 'remotes', 'webmockr', 'httr', 'tidyjson', 'nnet', 'caret', 'ggplot2', 'dplyr', 'jsonlite', 'tidyr', 'Metrics', 'knitr', 'kableExtra', 'DT', 'plotly'), repos='https://cloud.r-project.org/')"
-        R -e "remotes::install_github('ricardo-bion/ggradar')"
+        R -e "install.packages(c('testthat', 'devtools', 'webmockr', 'httr', 'tidyjson', 'nnet', 'caret', 'ggplot2', 'dplyr', 'jsonlite', 'tidyr', 'Metrics', 'knitr', 'kableExtra', 'DT', 'plotly'), dependencies = TRUE, repos='https://cloud.r-project.org/')"
+        R -e "library(devtools)"
+        R -e "devtools::install_github('ricardo-bion/ggradar', dependencies = TRUE)"
 
     - name: Print Library Path
       run: R -e ".libPaths()"
