@@ -37,7 +37,9 @@ jobs:
 
     - name: Update working directory
       run: |
-        cd ../..
+        ls -a
+        cd ..
+        ls -a
         ls -R
   
     - name: Print Working Directory
