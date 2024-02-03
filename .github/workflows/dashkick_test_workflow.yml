@@ -25,6 +25,9 @@ jobs:
       R_VERSION: ${{ matrix.r-version }}
 
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
     - name: Install R
       run: |
         sudo apt-get update
