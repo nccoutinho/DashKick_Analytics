@@ -45,7 +45,7 @@ jobs:
     - name: Set up package
       run: |
         R -e "install.packages(c('testthat', 'remotes'), repos='https://cloud.r-project.org/')"
-        R -e "remotes::install_github('wmurphyrd/webmockr')"
+        R -e "remotes::install_github('ropensci/webmockr')"
         R -e "remotes::install_github('hadley/httr')"
 
 
