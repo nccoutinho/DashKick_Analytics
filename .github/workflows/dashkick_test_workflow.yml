@@ -41,10 +41,12 @@ jobs:
     - name: Print Working Directory
       run: pwd
         
-    - name: Set up package
-      run: |
-        R -e "install.packages(c('testthat', 'webmockr', 'httr', 'ggradar', 'ggplot2', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'plotly', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'), repos='https://cloud.r-project.org/')"
+    - name: Print Library Path
+      run: R -e ".libPaths()"
 
+    - name: List Contents of Library Directory
+      run: ls -R /home/runner/work/_temp/Library
+      
     - name: Print Installed Packages
       run: R -e "installed.packages()"
     
