@@ -1,0 +1,42 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+#
+# See https://github.com/r-lib/actions/tree/master/examples#readme for
+# additional example workflows available for the R community.
+
+name: R Package Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        r-version: [4.0]
+
+    env:
+      R_VERSION: ${{ matrix.r-version }}
+
+    steps:
+    - name: Set up R
+      uses: r-lib/actions/setup-r@v1
+      with:
+        r-version: ${{ env.R_VERSION }}
+        
+    - name: Install dependencies
+      run: |
+        R -e "install.packages(c('devtools', 'testthat', 'webmockr', 'tidyjson', 'dplyr', 'jsonlite', 'httr', 'DT', 'plotly', 'remotes'), repos='https://cloud.r-project.org/')"
+        R -e "remotes::install_github('nccoutinho/DashKick_Analytics/dashkickAnalytics')"
+        
+    - name: Install package
+      run: R CMD INSTALL .
+
+    - name: Run tests
+      run: R CMD check .
