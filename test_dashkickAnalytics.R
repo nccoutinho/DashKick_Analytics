@@ -1,5 +1,3 @@
-install.packages(c('testthat', 'webmockr', 'httr', 'ggradar', 'ggplot2', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'plotly', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'), repos='https://cloud.r-project.org/')
-
 library(testthat)
 library(webmockr)
 library(tidyjson)
