@@ -43,10 +43,5 @@ jobs:
         R -e "install.packages(c('testthat'), repos='https://cloud.r-project.org/')"
       
     - name: Run tests
-      run: Rscript -e "testthat::test_dir('dashkickAnalytics')"
+      run: Rscript -e "testthat::test_dir('./dashkickAnalytics/tests')"
 
-    - name: Debug Information
-      run: |
-        ls -R
-        ls dashkickAnalytics
-        R -e "devtools::session_info('dashkickAnalytics')"
