@@ -37,8 +37,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        R -e "install.packages(c('devtools', 'testthat', 'remotes'), repos='https://cloud.r-project.org/')"
-        R -e "remotes::install_github('YourGitHubUsername/dashkickAnalytics')"
+        R -e "install.packages(c('devtools', 'testthat', 'remotes', 'httr', 'webmockr'), repos='https://cloud.r-project.org/')"
         
     - name: Install package
       run: R CMD INSTALL .
