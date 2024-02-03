@@ -41,19 +41,14 @@ jobs:
     - name: Print Working Directory
       run: pwd
       
-    - name: Install packages
-      run: R -e "install.packages(c('testthat', 'devtools', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'), repos='https://cloud.r-project.org/')"    
-    
     - name: Set up package
       run: |
-        R -e "devtools::install_github('wmurphyrd/webmockr')"
-        R -e "install.packages('webmockr', repos='https://cloud.r-project.org/')"
-        R -e "install.packages('ggradar', repos='https://cloud.r-project.org/')"
-        R -e "install.packages('ggplot2', repos='https://cloud.r-project.org/')"
-        R -e "install.packages('curl', repos='https://cloud.r-project.org/')"
-        R -e "install.packages('crul', repos='https://cloud.r-project.org/')"
-        R -e "devtools::install_github('hadley/httr')"
+        R -e "install.packages(c('testthat', 'devtools', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'), repos='https://cloud.r-project.org/')"
+        R -e "library(devtools); devtools::install_github('wmurphyrd/webmockr')"
+        R -e "install.packages(c('ggradar', 'ggplot2', 'curl', 'crul'), repos='https://cloud.r-project.org/')"
+        R -e "library(devtools); devtools::install_github('hadley/httr')"
         R -e "install.packages('plotly', repos='https://cloud.r-project.org/')"
+
 
     - name: Print Library Path
       run: R -e ".libPaths()"
