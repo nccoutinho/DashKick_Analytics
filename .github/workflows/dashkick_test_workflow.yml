@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        r-version: [4.3.2]
+        r-version: [4.3.3]
 
     env:
       R_VERSION: ${{ matrix.r-version }}
@@ -50,7 +50,7 @@ jobs:
         
     - name: Set up package
       run: |
-        R -e "install.packages(c('testthat', 'webmockr', 'httr', 'ggradar', 'ggplot2', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'plotly', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'))"
+        R -e "install.packages(c('testthat', 'webmockr', 'httr', 'ggradar', 'ggplot2', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'plotly', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'), repos='https://cloud.r-project.org/')"
 
     - name: Print Installed Packages
       run: R -e "installed.packages()"
