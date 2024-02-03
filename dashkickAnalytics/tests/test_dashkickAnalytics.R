@@ -11,6 +11,8 @@ library(DT)
 library(plotly)
 library(dashkickAnalytics)
 
+httr_mock(on = FALSE)
+
 
 test_that("compare_teams function returns a ggradar object with correct attributes", {
   # Use example teams
