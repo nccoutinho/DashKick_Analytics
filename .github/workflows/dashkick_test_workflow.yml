@@ -27,11 +27,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      
-    - name: Install R
-      run: |
-        sudo apt-get update
-        sudo apt-get install r-base=4.3.3-1bionic
 
     - name: Set up R
       uses: r-lib/actions/setup-r@v2
