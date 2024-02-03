@@ -36,7 +36,9 @@ jobs:
         r-version: ${{ env.R_VERSION }}
 
     - name: List files in the directory
-      run: ls -R
+      run: |
+        cd ..
+        ls -R
   
     - name: Print Working Directory
       run: pwd
