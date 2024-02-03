@@ -40,7 +40,7 @@ jobs:
         R -e "install.packages(c('devtools', 'testthat', 'remotes', 'httr', 'webmockr'), repos='https://cloud.r-project.org/')"
         
     - name: Install package
-      run: R CMD INSTALL .
+      run: R CMD INSTALL dashkickAnalytics
       
     - name: Run tests
       run: R CMD check .
