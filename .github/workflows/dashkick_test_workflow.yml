@@ -44,11 +44,9 @@ jobs:
       
     - name: Set up package
       run: |
-        R -e "install.packages(c('testthat', 'devtools', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'), repos='https://cloud.r-project.org/')"
-        R -e "library(devtools); devtools::install_github('wmurphyrd/webmockr')"
-        R -e "install.packages(c('ggradar', 'ggplot2', 'curl', 'crul'), repos='https://cloud.r-project.org/')"
-        R -e "library(devtools); devtools::install_github('hadley/httr')"
-        R -e "install.packages('plotly', repos='https://cloud.r-project.org/')"
+        R -e "install.packages(c('testthat', 'remotes'), repos='https://cloud.r-project.org/')"
+        R -e "remotes::install_github('wmurphyrd/webmockr')"
+        R -e "remotes::install_github('hadley/httr')"
 
 
     - name: Print Library Path
