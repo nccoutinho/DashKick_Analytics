@@ -50,7 +50,7 @@ jobs:
         
     - name: Set up package
       run: |
-        R -e "install.packages(c('testthat'), repos='https://cloud.r-project.org/')"
+        R -e "install.packages(c('testthat', 'webmockr', 'httr', 'ggradar', 'ggplot2', 'dplyr', 'tidyjson', 'jsonlite', 'DT', 'plotly', 'nnet', 'caret', 'Metrics', 'knitr', 'kableExtra'), repos='https://cloud.r-project.org/')"
       
     - name: Run tests
       run: Rscript test_dashkickAnalytics.R
