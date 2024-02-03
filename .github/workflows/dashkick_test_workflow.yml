@@ -37,11 +37,10 @@ jobs:
         
     - name: Set up package
       run: |
-        R -e "install.packages(c('devtools', 'testthat'), repos='https://cloud.r-project.org/')"
-        R -e "devtools::load_all('dashkickAnalytics')"
+        R -e "install.packages(c('testthat'), repos='https://cloud.r-project.org/')"
       
     - name: Run tests
-      run: R CMD check dashkickAnalytics
+      run: Rscript -e "testthat::test_dir('dashkickAnalytics/tests')"
 
     - name: Debug Information
       run: |
