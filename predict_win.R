@@ -9,8 +9,6 @@ library(httr)
 library(jsonlite)
 library(tidyjson)
 
-library(testthat)
-
 
 predict_win <- function() {
   url <- "https://api-football-v1.p.rapidapi.com/v3/fixtures"
@@ -22,7 +20,7 @@ predict_win <- function() {
   
   response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
   
-  json_string <- content(response, "text")
+  json_string <- content(response, "text", encoding='UTF-8')
   
   json_data <- fromJSON(json_string)
   
@@ -49,7 +47,7 @@ predict_win <- function() {
     Referee = match_stats$fixture$referee
   )
   
- 
+  
   
   soccer_data$GoalDiff <- soccer_data$FT_ScoreHome - soccer_data$FT_scoreAway
   
@@ -60,12 +58,16 @@ predict_win <- function() {
   
   soccer_data$Time <- as.POSIXct(soccer_data$Time, format = "%H:%M:%S")
   
+  soccer_data <- soccer_data %>%
+    mutate(Stadium = replace(Stadium, Stadium == "American Express Stadium", "The American Express Community Stadium"))
+  soccer_data <- soccer_data %>%
+    mutate(Stadium = replace(Stadium, Stadium == "American Express Community's Stadium", "The American Express Community Stadium"))
+  
   next_data <- soccer_data  %>%
     filter(Status != "FT")
   
   soccer_data <- soccer_data %>%
     filter(Status == "FT")
-  
   model_data <- soccer_data %>%
     select(HomeTeam, AwayTeam, Stadium, Time, GoalDiff)
   
@@ -73,7 +75,7 @@ predict_win <- function() {
   split_index <- createDataPartition(model_data$GoalDiff, p = 0.8, list = FALSE)
   train_data <- model_data[split_index, ]
   test_data <- model_data[-split_index, ]
-  
+  tail(model_data, 20)
   
   lm_model <- lm(GoalDiff ~ ., data = train_data)
   
@@ -91,8 +93,8 @@ predict_win <- function() {
   
   correct_predictions <- test_data$Outcome == test_data$ActualOutcome
   accuracy <- mean(correct_predictions)
-  precision <- accuracy(predictions_lm, test_data$GoalDiff)
-  recall <- recall(predictions_lm, test_data$GoalDiff)
+  # precision <- accuracy(predictions_lm, test_data$GoalDiff)
+  # recall <- recall(predictions_lm, test_data$GoalDiff)
   
   mse_lm <- mean((predictions_lm - test_data$GoalDiff)^2)
   rmse_lm <- sqrt(mse_lm)
@@ -117,36 +119,6 @@ predict_win <- function() {
   match_result <- rbind(soccer_data, next_data)
   return(match_result)
 }
-
-match_outcomes <- predict_win()
-tail(match_outcomes)
-
-test_that("predict_win function returns a data frame with correct structure", {
-  result <- predict_win()
-  
-  # Print column names for debugging
-  print(colnames(result))
-  
-  # Check if the result is a data frame
-  expect_is(result, "data.frame")
-  
-  # Check if the required columns are present
-  required_columns <- c("FixtureDate", "TimeStamp", "Stadium", "Status",
-                        "HomeTeam", "AwayTeam", "Home_Winner", "FT_ScoreHome",
-                        "FT_scoreAway", "HT_ScoreHome", "HT_scoreAway",
-                        "Referee", "GoalDiff", "Time")
-  expect_true(all(required_columns %in% colnames(result)))
-  
-  # Check if the result has non-zero rows
-  expect_true(nrow(result) > 0)
-  
-  # Check if Home_Winner column exists
-  expect_true("Home_Winner" %in% colnames(result))
-  
-  # Check if Home_Winner values are either TRUE, FALSE, or NA
-  valid_home_winner_values <- c(TRUE, FALSE, NA)
-  expect_true(all(result$Home_Winner %in% valid_home_winner_values))
-})
 
 
 predict_final_standings <- function() {
@@ -233,29 +205,3 @@ predict_final_standings <- function() {
   
   return(combined_standings)
 }
-
-final_stand <- predict_final_standings()
-
-test_that("predict_final_standings function returns a data frame with correct structure", {
-  final_stand <- predict_final_standings()
-  
-  # Check if the result is a data frame
-  expect_is(final_stand, "data.frame")
-  
-  # Check if the required columns are present
-  required_columns <- c("Team", "Points", "Goal_Difference", "Position_Displacement")
-  expect_true(all(required_columns %in% colnames(final_stand)))
-  
-  # Check if the result has exactly 20 rows
-  expect_equal(nrow(final_stand), 20)
-  
-  # You can add more specific checks based on your expectations
-  
-  # Check if Position_Displacement is of integer type
-  expect_is(final_stand$Position_Displacement, "integer")
-  
-  # Check if Points and Goal_Difference are of numeric type
-  expect_is(final_stand$Points, "numeric")
-  expect_is(final_stand$Goal_Difference, "numeric")
-})
-

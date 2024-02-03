@@ -9,38 +9,41 @@ library(dplyr)
 library(jsonlite)
 library(DT)
 library(plotly)
-library(dashkickAnalytics)
 
 httr_mock(on = FALSE)
+source("C:/Users/prana/Documents/MDS/DashKick_Analytics/predict_win.R")
+source("C:/Users/prana/Documents/MDS/DashKick_Analytics/compare_teams.R")
+source("C:/Users/prana/Documents/MDS/DashKick_Analytics/track_performance.R")
+source("C:/Users/prana/Documents/MDS/DashKick_Analytics/game_changers.R")
 
 test_that("compare_teams function returns a ggradar object with correct attributes", {
   # Use example teams
   team1_name <- "Arsenal"
   team2_name <- "Manchester United"
-
+  
   # Run the function
   compare_teams_result <- compare_teams(team1_name, team2_name)
-
+  
   # Check if the result is a ggplot object
   expect_true(inherits(compare_teams_result, "gg"),
               "Result should be a ggplot object")
-
+  
   # Check if the title is present
   expect_true("title" %in% names(compare_teams_result$labels),
               "Title should be present in ggplot object")
-
+  
   # Check if 'line' is present in the theme
   expect_true("line" %in% names(compare_teams_result$theme),
               "Line should be present in the theme")
-
+  
   # Check if 'rect' is present in the theme
   expect_true("rect" %in% names(compare_teams_result$theme),
               "Rect should be present in the theme")
-
+  
   # Check if 'colour' is present in 'line'
   expect_true("colour" %in% names(compare_teams_result$theme$line),
               "Colour should be present in line")
-
+  
   # Check if 'fill' is present in 'rect'
   expect_true("fill" %in% names(compare_teams_result$theme$rect),
               "Fill should be present in rect")
@@ -50,55 +53,55 @@ test_that("compare_teams function returns a ggradar object with correct attribut
 test_that("track_performance function returns a plotly object with correct attributes", {
   # Use example team
   team_name <- "Arsenal"
-
+  
   # Run the function
   track_performance_result <- track_performance(team_name)
-
+  
   # Check if the result is a plotly object
   expect_is(track_performance_result, "plotly")
-
+  
   # Check if layout is not NULL
   expect_false(is.null(track_performance_result$x$layout), "The layout should not be NULL")
-
+  
   # Check if certain elements are present within the layout
   expect_true("title" %in% names(track_performance_result$x$layout),
               "Title should be present in layout")
-
+  
   expect_true("xaxis" %in% names(track_performance_result$x$layout),
               "xaxis should be present in layout")
-
+  
   expect_true("yaxis" %in% names(track_performance_result$x$layout),
               "yaxis should be present in layout")
-
+  
   expect_true("legend" %in% names(track_performance_result$x$layout),
               "legend should be present in layout")
-
+  
 })
 
 
 
 test_that("predict_win function returns a data frame with correct structure", {
   result <- predict_win()
-
+  
   # Print column names for debugging
   print(colnames(result))
-
+  
   # Check if the result is a data frame
   expect_is(result, "data.frame")
-
+  
   # Check if the required columns are present
   required_columns <- c("FixtureDate", "TimeStamp", "Stadium", "Status",
                         "HomeTeam", "AwayTeam", "Home_Winner", "FT_ScoreHome",
                         "FT_scoreAway", "HT_ScoreHome", "HT_scoreAway",
                         "Referee", "GoalDiff", "Time")
   expect_true(all(required_columns %in% colnames(result)))
-
+  
   # Check if the result has non-zero rows
   expect_true(nrow(result) > 0)
-
+  
   # Check if Home_Winner column exists
   expect_true("Home_Winner" %in% colnames(result))
-
+  
   # Check if Home_Winner values are either TRUE, FALSE, or NA
   valid_home_winner_values <- c(TRUE, FALSE, NA)
   expect_true(all(result$Home_Winner %in% valid_home_winner_values))
@@ -107,22 +110,22 @@ test_that("predict_win function returns a data frame with correct structure", {
 
 test_that("predict_final_standings function returns a data frame with correct structure", {
   final_stand <- predict_final_standings()
-
+  
   # Check if the result is a data frame
   expect_is(final_stand, "data.frame")
-
+  
   # Check if the required columns are present
   required_columns <- c("Team", "Points", "Goal_Difference", "Position_Displacement")
   expect_true(all(required_columns %in% colnames(final_stand)))
-
+  
   # Check if the result has exactly 20 rows
   expect_equal(nrow(final_stand), 20)
-
+  
   # You can add more specific checks based on your expectations
-
+  
   # Check if Position_Displacement is of integer type
   expect_is(final_stand$Position_Displacement, "integer")
-
+  
   # Check if Points and Goal_Difference are of numeric type
   expect_is(final_stand$Points, "numeric")
   expect_is(final_stand$Goal_Difference, "numeric")
@@ -157,10 +160,10 @@ test_that("game_changers returns correct data", {
   result <- game_changers()
   # Perform assertions based on the result
   expect_is(result, "data.frame")
-
+  
   expected_columns <- c("PlayerName", "Team", "PlayerAge", "Appearances", "Goals", "Assists", "PenaltyGoals")
   expect_true(all(expected_columns %in% colnames(result)))
-
+  
   expect_gt(nrow(result), 0)
   expect_true(all(is.numeric(result$PlayerAge)))
   expect_true(all(result$Goals[0] >= 0))
@@ -177,41 +180,41 @@ test_that("top_20 produces a valid plot", {
     GoalsAssists = c(15, 11, 13),
     Team = c("TeamA", "TeamB", "TeamC")
   )
-
+  
   # Calling the function
   plot_result <- top_20(dummy_data)
-
+  
   # Check if the result is not NULL
   expect_false(is.null(plot_result), "The plot result should not be NULL")
-
+  
   # Check if the result is a plotly object
   expect_is(plot_result, "plotly", "The plot result should be a plotly object")
-
+  
   # Check if layoutAttrs is not NULL
   expect_false(is.null(plot_result$x$layoutAttrs), "The layoutAttrs should not be NULL")
-
+  
   # Extract the identifier
   identifier <- names(plot_result$x$layoutAttrs)[1]
-
+  
   # Check if certain elements are present within the identifier
   expect_true("title" %in% names(plot_result$x$layoutAttrs[[identifier]]))
   expect_true("xaxis" %in% names(plot_result$x$layoutAttrs[[identifier]]))
   expect_true("yaxis" %in% names(plot_result$x$layoutAttrs[[identifier]]))
   expect_true("barmode" %in% names(plot_result$x$layoutAttrs[[identifier]]))
-
+  
   # Optionally, you can dive deeper into specific elements if needed
   if ("title" %in% names(plot_result$x$layoutAttrs[[identifier]])) {
     expect_true("Top Game Changers of the EPL 23-24" %in% plot_result$x$layoutAttrs[[identifier]]$title)
   }
-
+  
   if ("xaxis" %in% names(plot_result$x$layoutAttrs[[identifier]])) {
     expect_true("Count" %in% plot_result$x$layoutAttrs[[identifier]]$xaxis$title$text)
   }
-
+  
   if ("yaxis" %in% names(plot_result$x$layoutAttrs[[identifier]])) {
     expect_true("Players" %in% plot_result$x$layoutAttrs[[identifier]]$yaxis$title$text)
   }
-
+  
   if ("barmode" %in% names(plot_result$x$layoutAttrs[[identifier]])) {
     barmode <- plot_result$x$layoutAttrs[[identifier]]$barmode
     expect_true(barmode == "stack")

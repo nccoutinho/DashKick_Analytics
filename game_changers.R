@@ -68,14 +68,3 @@ top_20 <- function(df) {
   return (show_bar)
 }
 
-
-df_20 <- game_changers()
-
-df_unique <- df_20 %>%
-  distinct(PlayerName, .keep_all = TRUE)
-
-show_bar <- top_20(df_unique)
-
-print(show_bar)
-
-
