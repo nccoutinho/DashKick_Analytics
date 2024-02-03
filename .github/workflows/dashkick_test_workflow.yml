@@ -44,7 +44,7 @@ jobs:
       
     - name: Set up package
       run: |
-        R -e "install.packages(c('testthat', 'webmockr', 'httr'), repos='https://cloud.r-project.org/')"
+        R -e "install.packages(c('testthat', 'webmockr', 'httr', 'tidyjson', 'nnet', 'caret', 'ggradar', 'ggplot2', 'dplyr', 'jsonlite', 'tidyr', 'Metrics', 'kintr', 'kableExtra'), repos='https://cloud.r-project.org/')"
 
 
     - name: Print Library Path
