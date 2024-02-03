@@ -43,5 +43,5 @@ jobs:
         R -e "install.packages(c('testthat'), repos='https://cloud.r-project.org/')"
       
     - name: Run tests
-      run: Rscript -e test_dashkickAnalytics.R
+      run: Rscript test_dashkickAnalytics.R
 
