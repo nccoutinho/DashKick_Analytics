@@ -37,7 +37,7 @@ jobs:
 
     - name: Update working directory
       run: |
-        cd ..
+        cd ../..
         ls -R
   
     - name: Print Working Directory
@@ -48,5 +48,7 @@ jobs:
         R -e "install.packages(c('testthat'), repos='https://cloud.r-project.org/')"
       
     - name: Run tests
-      run: Rscript test_dashkickAnalytics.R
+      run: |
+        cd ..
+        Rscript test_dashkickAnalytics.R
 
