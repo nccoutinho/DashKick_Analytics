@@ -11,10 +11,10 @@ library(DT)
 library(plotly)
 
 httr_mock(on = FALSE)
-source("predict_win.R")
+source("dashkickAnalytics/R/team.R")
 #source("compare_teams.R")
-source("track_performance.R")
-source("game_changers.R")
+source("dashkickAnalytics/R/visualization.R")
+#source("game_changers.R")
 
 
 test_that("track_performance function returns a plotly object with correct attributes", {
