@@ -36,7 +36,7 @@ The `teams` module provides essential functions for retrieving top goal scorers 
    - Predicts the outcomes of the remaining matches of the 2023 season.
 
 ##### `predict_league()`
-   - Predicts the final league standings of the 2023 season.
+   - Predicts the final league standings of the Premier League 2023 season.
 
 #### Visualizations Module
 
