@@ -33,7 +33,7 @@ The `teams` module provides essential functions for retrieving top goal scorers 
    - Pulls the top 20 game changers from the Premier League 2023 season.
 
 ##### `predict_win()`
-   - Predicts the outcomes of the remaining matches of the 2023 season.
+   - Predicts the outcomes of the remaining matches of the Premier League 2023 season.
 
 ##### `predict_league()`
    - Predicts the final league standings of the Premier League 2023 season.
