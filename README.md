@@ -22,3 +22,10 @@ The `teams` module provides essential functions for retrieving top goal scorers 
 
 3. **predict_league:**
    - Predicts the final league standings of the 2023 season.
+
+
+## Conclusion
+
+The `dashkick_analytics` package simplifies football team analysis, providing valuable insights and predictive capabilities. Explore the documentation for detailed function descriptions and parameters.
+
+For more information, visit our GitHub repository: [DashKick Analytics GitHub Repo](https://github.com/nccoutinho/DashKick_Analytics).
