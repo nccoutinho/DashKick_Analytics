@@ -7,3 +7,9 @@ The `dashkick_analytics` package is a robust tool designed for streamlined footb
 ### Restful API
 
 For this project, we chose the API-Football as the Restful API, offering rich football-related data.
+
+### Modules
+
+#### Teams Module
+
+The `teams` module provides essential functions for retrieving top goal scorers and making predictions for the 2023 season.
