@@ -1,5 +1,17 @@
+# DashKick Analytics 
+
+#### Christopher Mulya - 49209794
+#### Natalie Crystal Coutinho - 66731928
+#### Pranav Kumar Mahesh - 39703434
 
 [![R Package Test](https://github.com/nccoutinho/DashKick_Analytics/actions/workflows/dashkick_test_workflow.yml/badge.svg)](https://github.com/nccoutinho/DashKick_Analytics/actions/workflows/dashkick_test_workflow.yml)
+
+
+_This documentation outlines the functionalities and usage of the DashKick Analytics application's._
+
+
+
+---
 
 # DashKick Analytics Package
 
