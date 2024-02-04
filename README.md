@@ -7,7 +7,7 @@
 [![R Package Test](https://github.com/nccoutinho/DashKick_Analytics/actions/workflows/dashkick_test_workflow.yml/badge.svg)](https://github.com/nccoutinho/DashKick_Analytics/actions/workflows/dashkick_test_workflow.yml)
 
 
-_This documentation outlines the functionalities and usage of the DashKick Analytics application's._
+_This documentation outlines the functionalities and usage of the DashKick Analytics application._
 
 _The DashKick Analytics application is an R-based package tailored for predicting and visualizing metrics relevant to the English Premier League Football-related data of the 2023-2024 season._
 
