@@ -29,20 +29,20 @@ For this project, we chose the API-Football as the Restful API, offering rich fo
 
 The `teams` module provides essential functions for retrieving top goal scorers and making predictions for the 2023 season.
 
-### `game_changers()`
+##### `game_changers()`
    - Pulls the top 20 game changers from the Premier League 2023 season.
 
-### `predict_win()`
+##### `predict_win()`
    - Predicts the outcomes of the remaining matches of the 2023 season.
 
-### `predict_league()`
+##### `predict_league()`
    - Predicts the final league standings of the 2023 season.
 
 #### Visualizations Module
 
 The `visualizations` module facilitates the creation of interactive visualizations.
 
-### `top_20()`
+##### `top_20()`
 
    - The top_20 function generates a stacked bar plot displaying the top 20 goal scorers in the Premier League 2023 season.
 
