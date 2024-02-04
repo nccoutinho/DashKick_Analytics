@@ -41,10 +41,8 @@ jobs:
       
     - name: Set up package
       run: |
-        R -e "install.packages('devtools', repos='https://cloud.r-project.org/', dependencies = TRUE)"
-        R -e "install.packages(c('testthat'), repos='https://cloud.r-project.org/')"
-        R -e "library(devtools)"
-        R -e "devtools::install_github('ricardo-bion/ggradar', dependencies = TRUE)"
+        R -e "install.packages(c('ggradar'), repos='https://cloud.r-project.org/')"
+        
 
     - name: Print Library Path
       run: R -e ".libPaths()"
