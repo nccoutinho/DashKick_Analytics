@@ -15,13 +15,13 @@ _The DashKick Analytics application is an R-based package tailored for predictin
 
 # DashKick Analytics Package
 
-The `dashkick_analytics` package is a robust tool designed for streamlined football team management, player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive visualizations, this package provides users with a comprehensive platform.
+The `dashkick_analytics` package is a robust tool designed for streamlined soccer team management, player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive visualizations, this package provides users with a comprehensive platform.
 
 ## Overview
 
 ### Restful API
 
-For this project, we chose the API-Football as the Restful API, offering rich football-related data.
+For this project, we chose the API-Football as the Restful API, offering rich soccer-related data.
 
 ### Modules
 
@@ -58,6 +58,6 @@ devtools::install_github("nccoutinho/DashKick_Analytics/dashkickAnalytics")
 
 ## Conclusion
 
-The `dashkick_analytics` package simplifies football team analysis, providing valuable insights and predictive capabilities. Explore the documentation for detailed function descriptions and parameters.
+The `dashkick_analytics` package simplifies soccer team analysis, providing valuable insights and predictive capabilities. Explore the documentation for detailed function descriptions and parameters.
 
 For more information, visit our GitHub repository: [DashKick Analytics GitHub Repo](https://github.com/nccoutinho/DashKick_Analytics).
