@@ -13,10 +13,9 @@ library(dashkickAnalytics)
 
 httr_mock(on = FALSE)
 
-source("../R/predict_win.R")
+source("../R/team.R")
 #source("compare_teams.R")
-source("../R/track_performance.R")
-source("../R/game_changers.R")
+source("../R/visualization.R")
 
 
 test_that("track_performance function returns a plotly object with correct attributes", {
