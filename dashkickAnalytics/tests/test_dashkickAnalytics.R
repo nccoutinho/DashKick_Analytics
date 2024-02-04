@@ -14,7 +14,6 @@ library(dashkickAnalytics)
 httr_mock(on = FALSE)
 
 source("../R/team.R")
-#source("compare_teams.R")
 source("../R/visualization.R")
 
 
