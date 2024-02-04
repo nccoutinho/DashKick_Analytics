@@ -46,6 +46,10 @@ The `visualizations` module facilitates the creation of interactive visualizatio
 
    - The top_20 function generates a stacked bar plot displaying the top 20 goal scorers in the Premier League 2023 season.
 
+##### `compare_teams`
+
+   - The compare_teams function creates a spider plot that compares performance metrics between two teams. This visualization allows users to assess various aspects of team performance, such as goals for, goals against, draws, and losses, providing a dynamic and intuitive way to compare teams head-to-head.
+
 
 ## Getting Started
 
