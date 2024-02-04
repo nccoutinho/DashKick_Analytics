@@ -53,5 +53,5 @@ jobs:
       run: R -e "installed.packages()"
     
     - name: Run tests
-      run: Rscript test_dashkickAnalytics.R
+      run: Rscript -e "dashkickAnalytics/tests/test_dashkickAnalytics.R"
 
