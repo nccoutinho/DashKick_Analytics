@@ -1,4 +1,4 @@
-# DashKick Analytics 
+# Project-Group-6
 
 #### Christopher Mulya - 49209794
 #### Natalie Crystal Coutinho - 66731928
