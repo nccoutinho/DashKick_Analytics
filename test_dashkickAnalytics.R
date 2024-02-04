@@ -14,9 +14,7 @@ library(kableExtra)
 
 httr_mock(on = FALSE)
 source("dashkickAnalytics/R/team.R")
-#source("compare_teams.R")
 source("dashkickAnalytics/R/visualization.R")
-#source("game_changers.R")
 
 
 test_that("track_performance function returns a plotly object with correct attributes", {
