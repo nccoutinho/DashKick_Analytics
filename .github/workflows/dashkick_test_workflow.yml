@@ -41,7 +41,9 @@ jobs:
       
     - name: Set up package
       run: |
-        R -e "install.packages(c('ggradar'), repos='https://cloud.r-project.org/')"
+        R -e "install.packages('remotes')"
+        R -e "library(remotes)"
+        R -e "remotes::install_github('ricardo-bion/ggradar')"
         
 
     - name: Print Library Path
