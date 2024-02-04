@@ -23,6 +23,11 @@ The `teams` module provides essential functions for retrieving top goal scorers 
 3. **predict_league:**
    - Predicts the final league standings of the 2023 season.
 
+#### Visualizations Module
+
+The `visualizations` module facilitates the creation of interactive visualizations.
+
+
 ## Getting Started
 
 To get started with the DashKick Analytics package, install it using the following:
