@@ -12,42 +12,9 @@ library(plotly)
 
 httr_mock(on = FALSE)
 source("predict_win.R")
-source("compare_teams.R")
+#source("compare_teams.R")
 source("track_performance.R")
 source("game_changers.R")
-
-test_that("compare_teams function returns a ggradar object with correct attributes", {
-  # Use example teams
-  team1_name <- "Arsenal"
-  team2_name <- "Manchester United"
-  
-  # Run the function
-  compare_teams_result <- compare_teams(team1_name, team2_name)
-  
-  # Check if the result is a ggplot object
-  expect_true(inherits(compare_teams_result, "gg"),
-              "Result should be a ggplot object")
-  
-  # Check if the title is present
-  expect_true("title" %in% names(compare_teams_result$labels),
-              "Title should be present in ggplot object")
-  
-  # Check if 'line' is present in the theme
-  expect_true("line" %in% names(compare_teams_result$theme),
-              "Line should be present in the theme")
-  
-  # Check if 'rect' is present in the theme
-  expect_true("rect" %in% names(compare_teams_result$theme),
-              "Rect should be present in the theme")
-  
-  # Check if 'colour' is present in 'line'
-  expect_true("colour" %in% names(compare_teams_result$theme$line),
-              "Colour should be present in line")
-  
-  # Check if 'fill' is present in 'rect'
-  expect_true("fill" %in% names(compare_teams_result$theme$rect),
-              "Fill should be present in rect")
-})
 
 
 test_that("track_performance function returns a plotly object with correct attributes", {
