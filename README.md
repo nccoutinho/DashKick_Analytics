@@ -27,6 +27,9 @@ The `teams` module provides essential functions for retrieving top goal scorers 
 
 The `visualizations` module facilitates the creation of interactive visualizations.
 
+1. **top_20:**
+   - The top_20 function generates a stacked bar plot displaying the top 20 goal scorers in the Premier League 2023 season.
+
 
 ## Getting Started
 
