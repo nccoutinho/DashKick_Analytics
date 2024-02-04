@@ -57,7 +57,7 @@ The `visualizations` module facilitates the creation of interactive visualizatio
 
 ## Getting Started
 
-To get started with the DashKick Analytics package, install it using the following:
+To get started with the DashKick Analytics package, install it using the following prompt:
 
 ```r
 # Install from GitHub
