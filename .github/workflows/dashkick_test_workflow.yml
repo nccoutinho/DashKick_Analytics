@@ -41,6 +41,7 @@ jobs:
       
     - name: Set up package
       run: |
+        R -e "install.packages(c('usethis', 'pkgdown', 'rcmdcheck', 'rversions', 'urlchecker'), repos='https://cloud.r-project.org/')"
         R -e "install.packages(c('testthat', 'devtools'), repos='https://cloud.r-project.org/')"
         R -e "library(devtools)"
         R -e "devtools::install_github('ricardo-bion/ggradar', dependencies = TRUE)"
