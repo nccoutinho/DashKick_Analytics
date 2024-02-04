@@ -40,7 +40,7 @@ The `teams` module provides essential functions for retrieving top goal scorers 
 
 #### Visualizations Module
 
-The `visualizations` module facilitates the creation of interactive visualizations.
+The `visualizations` module facilitates the creation of interactive visualizations, such as stacked bar plot for top goal scorers, spider plots for team comparisons, and line plots for historical performance, exclusively focusing on the insights derived from the 2023 Premier League season. 
 
 ##### `top_20()`
 
