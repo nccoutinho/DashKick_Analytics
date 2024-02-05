@@ -9,7 +9,7 @@
 
 _This documentation outlines the functionalities and usage of the DashKick Analytics application._
 
-_The DashKick Analytics application is an R-based package tailored for predicting and visualizing metrics relevant to the English Premier League Football-related data of the 2023-2024 season._
+_The DashKick Analytics application is an R-based package tailored for predicting and visualizing metrics relevant to the English Premier League Football-related data of the 2023-24 season._
 
 ---
 
@@ -27,10 +27,10 @@ For this project, we chose the API-Football as the Restful API, offering rich so
 
 #### Teams Module
 
-The `teams` module provides essential functions for retrieving top goal scorers and making predictions for the Premier League 2023 season.
+The `teams` module provides essential functions for retrieving top goal scorers and making predictions for the Premier League 2023-24 season.
 
 ##### `game_changers()`
-   - This function retrieves information about the top 20 game changers from the Premier League 2023 season. Game changers are players who have significantly impacted matches with their performances, contributing crucial goals and influencing the outcome.
+   - This function retrieves information about the top 20 game changers from the Premier League 2023-24 season. Game changers are players who have significantly impacted matches with their performances, contributing to crucial goals and influencing the outcome.
 
 ##### `predict_win()`
    - Predicts the outcomes of the remaining matches of the Premier League 2023 season.
