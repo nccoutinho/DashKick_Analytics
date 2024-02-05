@@ -33,7 +33,7 @@ The `teams` module provides essential functions for retrieving top goal scorers 
    - This function retrieves information about the top 20 game changers from the Premier League 2023-24 season. Game changers are players who have significantly impacted matches with their performances, contributing to crucial goals and influencing the outcome. This may include player names, teams, and relevant statistics.
 
 ##### `predict_win()`
-   - Predicts the outcomes of the remaining matches in the Premier League 2023 season. This function utilizes advanced algorithms and historical performance data to provide insights into the potential winners of upcoming matches.
+   - Predicts the outcomes of the remaining matches in the Premier League 2023 season. This function utilizes advanced algorithms and historical performance data to provide insights into the potential winners of upcoming matches. It outputs a data structure containing predictions for the outcomes of the remaining matches in the Premier League 2023-24 season.
 
 ##### `predict_league()`
    - Predicts the final league standings of the Premier League 2023 season.
