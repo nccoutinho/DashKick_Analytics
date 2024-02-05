@@ -36,7 +36,7 @@ The `teams` module provides essential functions for retrieving top goal scorers 
    - Predicts the outcomes of the remaining matches in the Premier League 2023-24 season. This function utilizes advanced algorithms and historical performance data to provide insights into the potential winners of upcoming matches. It outputs a data structure containing predictions for the outcomes of all the matches including the remaining matches in the Premier League 2023-24 season.
 
 ##### `predict_league()`
-   - Predicts the final league standings of the Premier League 2023 season.
+   - Predicts the final league standings of the Premier League 2023 season. This function considers various factors, including team performance, player statistics, and historical data, to generate a projection of how teams will rank at the end of the season.
 
 #### Visualizations Module
 
