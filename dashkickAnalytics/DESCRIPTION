@@ -23,6 +23,7 @@ Imports:
   Metrics,
   knitr,
   kableExtra,
-  ggplot2
+  ggplot2,
+  ggradar
 Remotes: ricardo-bion/ggradar
 
