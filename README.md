@@ -44,7 +44,7 @@ The `visualizations` module facilitates the creation of interactive visualizatio
 
 ##### `top_20()`
 
-   - The top_20 function generates a stacked bar plot displaying the top 20 goal scorers in the Premier League 2023 season.
+   - Utilizing the data retrieved from the game_changers function, the top_20 function generates a stacked bar plot, illustrating the prolific goal scoring prowess of the top 20 performers in the Premire League of the 2023-24 season. 
 
 ##### `compare_teams(team1, team2)`
 
