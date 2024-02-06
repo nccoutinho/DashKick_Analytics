@@ -60,7 +60,12 @@ The `visualizations` module facilitates the creation of interactive visualizatio
 To get started with the DashKick Analytics package, install it using the following prompt:
 
 ```r
+# Installing dependent libraries manually
+# 
+# devtools::install_github("ricardo-bion/ggradar", dependencies = TRUE)
+
 # Install from GitHub
+library(devtools)
 devtools::install_github("nccoutinho/DashKick_Analytics/dashkickAnalytics")
 ```
 
