@@ -60,8 +60,8 @@ The `visualizations` module facilitates the creation of interactive visualizatio
 To get started with the DashKick Analytics package, install it using the following prompt:
 
 ```r
-# Installing dependent libraries manually
-# 
+# Install dependent libraries manually
+# install.packages(c('testthat', 'devtools', 'webmockr', 'httr', 'tidyjson', 'nnet', 'caret', 'ggplot2', 'dplyr', 'jsonlite', 'tidyr', 'Metrics', 'knitr', 'kableExtra', 'DT', 'plotly'), repos='https://cloud.r-project.org/')
 # devtools::install_github("ricardo-bion/ggradar", dependencies = TRUE)
 
 # Install from GitHub
