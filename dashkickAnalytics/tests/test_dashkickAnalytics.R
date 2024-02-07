@@ -220,3 +220,5 @@ test_that("top_20 produces a valid plot", {
     expect_true(barmode == "stack")
   }
 })
+
+httr_mock(on = FALSE)
