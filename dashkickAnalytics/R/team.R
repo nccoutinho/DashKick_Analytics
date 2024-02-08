@@ -209,11 +209,13 @@ predict_win <- function() {
 
 
 
-#' Function 3 Title
+#' predict_final_standings()
+#' 
+#' Predicts the final league standings of the Premier League 2023-24 season. 
+#' 
+#'This function combines match prediction results with current league standings to generate the final league table. It retrieves match data and standings from specified APIs, performs calculations, and produces a visual representation of the league table.
 #'
-#' Description of what the function does.
-#'
-#' @return What the function returns.
+#' @return A data frame containing the final league standings.
 #' @examples
 #' predict_final_standings()
 #'
