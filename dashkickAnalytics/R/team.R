@@ -209,7 +209,7 @@ predict_win <- function() {
 
 
 
-#' predict_final_standings()
+#' Predict Final Standings
 #' 
 #' Predicts the final league standings of the Premier League 2023-24 season. 
 #' 
