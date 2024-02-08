@@ -1,12 +1,14 @@
 Package: dashkickAnalytics
-Title: What the Package Does (One Line, Title Case)
+Title: Comprehensive Soccer Analytics
 Version: 0.0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Christopher", "Last", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: The dashkickAnalytics package is a robust tool designed for streamlined soccer team management, 
+player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive 
+visualizations, this package provides users with a comprehensive platform.
+
+License: `use_mit_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
