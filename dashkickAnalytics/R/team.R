@@ -66,14 +66,16 @@ game_changers <- function() {
 
 
 
-#' Function 2 Title
-#'
-#' Description of what the function does.
-#'
-#' @return What the function returns.
-#' @examples
 #' predict_win()
+#' 
+#' Predicts the outcomes of the remaining matches in the Premier League 2023-24 season. 
 #'
+#' This function retrieves football match data from API - Football, by training a linear regression model on historical data, and predicts match outcomes for upcoming fixtures.
+#'
+#' @return A data frame containing match details and predicted outcomes.
+#' @examples
+#' match_data <- predict_win()
+#' head(match_data)
 #'
 #'
 #' @import httr
