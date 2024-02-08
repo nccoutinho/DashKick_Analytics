@@ -213,14 +213,16 @@ compare_teams <- function(team1_name, team2_name) {
 
 
 
-#' Function 2 Title
+#' Track Performance
 #'
-#' Description of what the function does.
+#' Retrieves and visualizes the performance of a specified soccer team in the English Premier League during the 2023 season.
 #'
-#' @return What the function returns.
+#' @param team_name The name of the soccer team for which performance data is to be tracked.
+#'
+#' @return A plot displaying the team's performance over the season.
+#'
 #' @examples
 #' track_performance('Arsenal')
-#'
 #'
 #' @import httr
 #' @import tidyjson
