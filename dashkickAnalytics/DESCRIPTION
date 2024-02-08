@@ -4,6 +4,7 @@ Version: 0.0.0.1
 Authors@R: 
     person("Christopher", "Mulya", , "cprasetya2000@gmail.com", role = c("aut"))
     person("Natalie", "Coutinho", , "coutinho.natalie0@gmail.com", role = c("aut"))
+    person("Pranav", "Mahesh", , "pranava.km@gmail.com", role = c("aut"))
 Description: The dashkickAnalytics package is a robust tool designed for streamlined soccer team management, 
 player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive 
 visualizations, this package provides users with a comprehensive platform.
