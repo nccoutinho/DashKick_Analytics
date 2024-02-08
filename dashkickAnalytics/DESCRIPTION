@@ -1,6 +1,6 @@
 Package: dashkickAnalytics
 Title: Comprehensive Soccer Analytics
-Version: 0.0.0.1
+Version: 0.0.1
 Authors@R: 
     person("Christopher", "Mulya", , "cprasetya2000@gmail.com", role = c("aut"))
     person("Natalie", "Coutinho", , "coutinho.natalie0@gmail.com", role = c("aut"))
