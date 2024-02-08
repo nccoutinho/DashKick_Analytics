@@ -1,11 +1,14 @@
-#' Function 1 Title
+#' Compare Teams
 #'
-#' Description of what the function does.
+#' Compares the performance metrics of two soccer teams in the English Premier League during the 2023 season.
 #'
-#' @return What the function returns.
+#' @param team1_name The name of the first soccer team for comparison.
+#' @param team2_name The name of the second soccer team for comparison.
+#'
+#' @return A spider plot comparing the performance metrics of the two teams.
+#'
 #' @examples
 #' compare_teams('Arsenal', 'Manchester United')
-#'
 #'
 #' @import httr
 #' @import tidyjson
