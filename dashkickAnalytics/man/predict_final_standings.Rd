@@ -2,18 +2,22 @@
 % Please edit documentation in R/team.R
 \name{predict_final_standings}
 \alias{predict_final_standings}
-\title{Function 3 Title}
+\title{predict_final_standings()}
 \usage{
 predict_final_standings()
 }
 \value{
-What the function returns.
+A data frame containing the final league standings.
 }
 \description{
-Description of what the function does.
+Predicts the final league standings of the Premier League 2023-24 season.
+}
+\details{
+This function combines match prediction results with current league standings to generate the final league table. It retrieves match data and standings from specified APIs, performs calculations, and produces a visual representation of the league table.
 }
 \examples{
-predict_final_standings()
+final_standings <- predict_final_standings()
+head(final_standings)
 
 
 

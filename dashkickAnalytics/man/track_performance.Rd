@@ -2,18 +2,20 @@
 % Please edit documentation in R/visualization.R
 \name{track_performance}
 \alias{track_performance}
-\title{Function 2 Title}
+\title{Track Performance}
 \usage{
 track_performance(team_name)
 }
+\arguments{
+\item{team_name}{The name of the soccer team for which performance data is to be tracked.}
+}
 \value{
-What the function returns.
+A plot displaying the team's performance over the season.
 }
 \description{
-Description of what the function does.
+Retrieves and visualizes the performance of a specified soccer team in the English Premier League during the 2023 season.
 }
 \examples{
 track_performance('Arsenal')
-
 
 }

@@ -2,19 +2,22 @@
 % Please edit documentation in R/team.R
 \name{predict_win}
 \alias{predict_win}
-\title{Function 2 Title}
+\title{predict_win()}
 \usage{
 predict_win()
 }
 \value{
-What the function returns.
+A data frame containing match details and predicted outcomes.
 }
 \description{
-Description of what the function does.
+Predicts the outcomes of the remaining matches in the Premier League 2023-24 season.
+}
+\details{
+This function retrieves football match data from API - Football, by training a linear regression model on historical data, and predicts match outcomes for upcoming fixtures.
 }
 \examples{
-predict_win()
-
+match_data <- predict_win()
+head(match_data)
 
 
 }

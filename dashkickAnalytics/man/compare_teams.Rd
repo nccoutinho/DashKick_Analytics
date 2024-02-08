@@ -2,18 +2,22 @@
 % Please edit documentation in R/visualization.R
 \name{compare_teams}
 \alias{compare_teams}
-\title{Function 1 Title}
+\title{Compare Teams}
 \usage{
 compare_teams(team1_name, team2_name)
 }
+\arguments{
+\item{team1_name}{The name of the first soccer team for comparison.}
+
+\item{team2_name}{The name of the second soccer team for comparison.}
+}
 \value{
-What the function returns.
+A spider plot comparing the performance metrics of the two teams.
 }
 \description{
-Description of what the function does.
+Compares the performance metrics of two soccer teams in the English Premier League during the 2023 season.
 }
 \examples{
 compare_teams('Arsenal', 'Manchester United')
-
 
 }

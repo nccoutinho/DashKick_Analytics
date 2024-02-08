@@ -217,7 +217,8 @@ predict_win <- function() {
 #'
 #' @return A data frame containing the final league standings.
 #' @examples
-#' predict_final_standings()
+#' final_standings <- predict_final_standings()
+#' head(final_standings)
 #'
 #'
 #'
