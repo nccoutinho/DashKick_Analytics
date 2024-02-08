@@ -2,7 +2,7 @@
 % Please edit documentation in R/team.R
 \name{predict_win}
 \alias{predict_win}
-\title{predict_win()}
+\title{Predict Win}
 \usage{
 predict_win()
 }
