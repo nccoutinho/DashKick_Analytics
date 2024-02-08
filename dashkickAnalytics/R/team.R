@@ -66,7 +66,7 @@ game_changers <- function() {
 
 
 
-#' predict_win()
+#' Predict Win
 #' 
 #' Predicts the outcomes of the remaining matches in the Premier League 2023-24 season. 
 #'
