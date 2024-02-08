@@ -15,7 +15,7 @@ _The DashKick Analytics application is an R-based package tailored for predictin
 
 # DashKick Analytics Package
 
-The `dashkick_analytics` package is a robust tool designed for streamlined soccer team management, player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive visualizations, this package provides users with a comprehensive platform.
+The `dashkickAnalytics` package is a robust tool designed for streamlined soccer team management, player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive visualizations, this package provides users with a comprehensive platform.
 
 ## Overview
 
