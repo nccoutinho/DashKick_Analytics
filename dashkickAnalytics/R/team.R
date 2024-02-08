@@ -230,6 +230,7 @@ predict_win <- function() {
 #'
 #' @export
 predict_final_standings <- function() {
+  tryCatch({
   match_result <- predict_win()
 
   url <- "https://api-football-v1.p.rapidapi.com/v3/standings"
@@ -245,6 +246,11 @@ predict_final_standings <- function() {
   json_data <- fromJSON(json_string)
 
   standings <- json_data$response
+  }, error = function(e){
+    message('An error occured: ', e$message)
+    return (NULL)
+  })
+  
 
   stand_df <- data.frame(
     rank = standings$league$standings[[1]][[1]]$rank,
