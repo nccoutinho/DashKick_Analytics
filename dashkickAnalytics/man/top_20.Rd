@@ -2,15 +2,20 @@
 % Please edit documentation in R/visualization.R
 \name{top_20}
 \alias{top_20}
-\title{Top 20 Function (Internal)}
+\title{Top 20}
 \usage{
 top_20(df)
 }
 \value{
-What the function returns.
+The stacked bar plot visualizing the top 20 EPL players.
 }
 \description{
-Description of what the function does. (This function is not intended for user access.)
+Visualize thee top 20 EPL players of the 23-24 season based on goals and assists. (This function is not intended for user access.)
+}
+\details{
+This function takes a data frame containing statistics of EPL players and visualizes the top
+20 players based on their combined goals and assists. It creates a bar chart using the Plotly
+library, with players' names reordered based on their combined goals and assists.
 }
 \examples{
 # This function is not meant to be called directly by users.

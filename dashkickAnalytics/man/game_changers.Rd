@@ -2,18 +2,25 @@
 % Please edit documentation in R/team.R
 \name{game_changers}
 \alias{game_changers}
-\title{Function 1 Title}
+\title{Game Changers}
 \usage{
 game_changers()
 }
 \value{
-What the function returns.
+A data frame containing statistics of the top 20 football players based on their combined goals and assists.
 }
 \description{
-Description of what the function does.
+Retrieve statistics of the top soccer players from the Premier League 2023-23 season.
+}
+\details{
+This function retrieves statistics of soccer players from the EPL 2023-24 season
+using API-Football. It then processes the data to extract relevant information
+such as player name, team, age, appearances, goals, assists, and penalty goals.
+It calculates the total goals and assists combined, sorts the players based on this
+combined statistic and selects the top 20 players.
 }
 \examples{
-game_changers()
+players_data <- game_changers()
 
 
 }

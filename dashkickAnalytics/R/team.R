@@ -1,10 +1,17 @@
-#' Function 1 Title
+#' Game Changers
 #'
-#' Description of what the function does.
+#' Retrieve statistics of the top soccer players from the Premier League 2023-23 season.
 #'
-#' @return What the function returns.
+#' This function retrieves statistics of soccer players from the EPL 2023-24 season
+#' using API-Football. It then processes the data to extract relevant information
+#' such as player name, team, age, appearances, goals, assists, and penalty goals.
+#' It calculates the total goals and assists combined, sorts the players based on this
+#' combined statistic and selects the top 20 players.
+#'
+#'
+#' @return A data frame containing statistics of the top 20 football players based on their combined goals and assists.
 #' @examples
-#' game_changers()
+#' players_data <- game_changers()
 #'
 #'
 #' @import httr
@@ -67,8 +74,8 @@ game_changers <- function() {
 
 
 #' Predict Win
-#' 
-#' Predicts the outcomes of the remaining matches in the Premier League 2023-24 season. 
+#'
+#' Predicts the outcomes of the remaining matches in the Premier League 2023-24 season.
 #'
 #' This function retrieves football match data from API - Football, by training a linear regression model on historical data, and predicts match outcomes for upcoming fixtures.
 #'
@@ -94,20 +101,20 @@ game_changers <- function() {
 predict_win <- function() {
   tryCatch({
      url <- "https://api-football-v1.p.rapidapi.com/v3/fixtures"
-  
+
     queryString <- list(
       league = "39",
       season = "2023"
     )
-  
+
     response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
-  
+
     json_string <- content(response, "text", encoding='UTF-8')
-  
+
     json_data <- fromJSON(json_string)
-  
+
     json_data <- fromJSON(json_string)
-  
+
     match_stats <- json_data$response
   }, error = function(e){
     message('An error occured: ', e$message)
@@ -210,9 +217,9 @@ predict_win <- function() {
 
 
 #' Predict Final Standings
-#' 
-#' Predicts the final league standings of the Premier League 2023-24 season. 
-#' 
+#'
+#' Predicts the final league standings of the Premier League 2023-24 season.
+#'
 #'This function combines match prediction results with current league standings to generate the final league table. It retrieves match data and standings from specified APIs, performs calculations, and produces a visual representation of the league table.
 #'
 #' @return A data frame containing the final league standings.
@@ -255,7 +262,7 @@ predict_final_standings <- function() {
     message('An error occured: ', e$message)
     return (NULL)
   })
-  
+
 
   stand_df <- data.frame(
     rank = standings$league$standings[[1]][[1]]$rank,

@@ -239,22 +239,22 @@ compare_teams <- function(team1_name, team2_name) {
 track_performance <- function(team_name) {
   tryCatch({
     url <- "https://api-football-v1.p.rapidapi.com/v3/fixtures"
-    
+
     queryString <- list(
       league = "39",
       season = "2023"
     )
-    
+
     response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
-    
+
     json_string <- content(response, "text", encoding='UTF-8')
-    
+
     json_data <- fromJSON(json_string)
-    
+
     match_stats <- json_data$response
-    
+
     head(match_stats, 10)
-    
+
     fixtures <- data.frame(
       FixtureDate = match_stats$fixture$date,
       TimeStamp = match_stats$fixture$timestamp,
@@ -269,19 +269,19 @@ track_performance <- function(team_name) {
       HT_scoreAway = match_stats$score$halftime$away,
       Referee = match_stats$fixture$referee
     )
-    
+
     # Filter data for the specified team
     team_data <- fixtures[fixtures$HomeTeam == team_name | fixtures$AwayTeam == team_name, ]
-    
+
     # Create a new column to identify if the team is playing at home or away
     team_data$Location <- ifelse(team_data$HomeTeam == team_name, "Home", "Away")
-    
+
     # Create a new variable to represent the order of fixtures
     team_data$FixtureNumber <- seq_len(nrow(team_data))
-    
+
     # Filter data to include only rows with non-NA values in both 'FT_ScoreHome' and 'FT_scoreAway'
     team_data <- team_data[complete.cases(team_data[, c('FT_ScoreHome', 'FT_scoreAway')]), ]
-    
+
     # Plotting
     plot <- ggplot(team_data, aes(x = FixtureNumber,
                                   y = ifelse(Location == "Home", FT_ScoreHome, FT_scoreAway),
@@ -299,7 +299,7 @@ track_performance <- function(team_name) {
            shape = "Location") +
       theme_minimal() +
       guides(shape = 'none')
-    
+
     # Convert ggplot object to plotly object for interactive features
     plotly::ggplotly(plot, tooltip = "text")
   }, error = function(e) {
@@ -314,11 +314,16 @@ track_performance <- function(team_name) {
 
 
 
-#' Top 20 Function (Internal)
+#' Top 20
 #'
-#' Description of what the function does. (This function is not intended for user access.)
+#' Visualize thee top 20 EPL players of the 23-24 season based on goals and assists. (This function is not intended for user access.)
 #'
-#' @return What the function returns.
+#' This function takes a data frame containing statistics of EPL players and visualizes the top
+#' 20 players based on their combined goals and assists. It creates a bar chart using the Plotly
+#' library, with players' names reordered based on their combined goals and assists.
+#'
+#'
+#' @return The stacked bar plot visualizing the top 20 EPL players.
 #' @examples
 #' # This function is not meant to be called directly by users.
 #'
