@@ -2,7 +2,7 @@ Package: dashkickAnalytics
 Title: Comprehensive Soccer Analytics
 Version: 0.0.0.1
 Authors@R: 
-    person("Christopher", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Christopher", "M", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: The dashkickAnalytics package is a robust tool designed for streamlined soccer team management, 
 player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive 
