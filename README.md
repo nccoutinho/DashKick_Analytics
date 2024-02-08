@@ -17,6 +17,21 @@ _The DashKick Analytics application is an R-based package tailored for predictin
 
 The `dashkickAnalytics` package is a robust tool designed for streamlined soccer team management, player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive visualizations, this package provides users with a comprehensive platform.
 
+## Getting Started
+
+To get started with the DashKick Analytics package, install it using the following prompt:
+
+```r
+# Install dependent libraries manually
+# install.packages(c('testthat', 'devtools', 'webmockr', 'httr', 'tidyjson', 'nnet', 'caret', 'ggplot2', 'dplyr', 'jsonlite', 'tidyr', 'Metrics', 'knitr', 'kableExtra', 'DT', 'plotly'), repos='https://cloud.r-project.org/')
+# devtools::install_github("ricardo-bion/ggradar", dependencies = TRUE)
+
+# Install from GitHub
+library(devtools)
+devtools::install_github("nccoutinho/DashKick_Analytics/dashkickAnalytics")
+```
+
+
 ## Overview
 
 ### Restful API
@@ -54,20 +69,6 @@ The `visualizations` module facilitates the creation of interactive visualizatio
 
    - The track_performance function illustrates a team's performance over time with a multi-line plot. By visualizing the number of goals made by a team across multiple matches, users can identify trends, assess consistency, and gain a deeper understanding of a team's strengths and areas for improvement.
 
-
-## Getting Started
-
-To get started with the DashKick Analytics package, install it using the following prompt:
-
-```r
-# Install dependent libraries manually
-# install.packages(c('testthat', 'devtools', 'webmockr', 'httr', 'tidyjson', 'nnet', 'caret', 'ggplot2', 'dplyr', 'jsonlite', 'tidyr', 'Metrics', 'knitr', 'kableExtra', 'DT', 'plotly'), repos='https://cloud.r-project.org/')
-# devtools::install_github("ricardo-bion/ggradar", dependencies = TRUE)
-
-# Install from GitHub
-library(devtools)
-devtools::install_github("nccoutinho/DashKick_Analytics/dashkickAnalytics")
-```
 
 ## Conclusion
 
