@@ -18,12 +18,9 @@ information you need to contribute effectively.
 2.  [Code of Conduct](#code-of-conduct)
 3.  [How to Contribute](#how-to-contribute)
 4.  [Development Workflow](#development-workflow)
-5.  [Reporting Issues](#reporting-issues)
-6.  [Feature Requests](#feature-requests)
-7.  [Documentation](#documentation)
-8.  [Testing](#testing)
-9.  [Code Review](#code-review)
-10. [Acknowledgments](#acknowledgments)
+5.  [Documentation](#documentation)
+6.  [Code Review](#code-review)
+7. [Acknowledgments](#acknowledgments)
 
 ## Getting Started
 
