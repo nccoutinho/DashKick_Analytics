@@ -40,13 +40,13 @@ contributing. We aim to foster an inclusive and respectful community.
 
 We welcome contributions from the community! If you’re new to
 contributing to open source projects, check out our [Contributing
-Guide](./Contributing_Guide.md) for detailed information on how you can get
+Guide](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Documentation/Contributing_Guide.md) for detailed information on how you can get
 involved.
 
 ## Development Workflow
 
 To understand our development workflow, refer to our [Development
-Workflow Guide](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Development_Workflow.md). This guide provides information on branching strategies, pull requests, and more.
+Workflow Guide](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Documentation/Development_Workflow.md). This guide provides information on branching strategies, pull requests, and more.
 
 ## Documentation
 
