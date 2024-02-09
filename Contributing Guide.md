@@ -1,10 +1,11 @@
+---
 Authors: 
   - Christopher Mulya  
   - Natalie Coutinho  
   - Pranav Kumar Mahesh
   
 date: 2024-02-08
-
+---
 
 # Contributing to DashKick Analytics
 
