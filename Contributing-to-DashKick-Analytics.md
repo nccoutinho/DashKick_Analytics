@@ -48,37 +48,15 @@ involved.
 To understand our development workflow, refer to our [Development
 Workflow Guide](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Development_Workflow.md). This guide provides information on branching strategies, pull requests, and more.
 
-## Reporting Issues
-
-If you encounter a bug or have a problem with the project, please open
-an issue on our [GitHub Issues
-page](https://github.com/your-username/dashkick-analytics/issues). Make
-sure to follow the issue template provided.
-
-## Feature Requests
-
-If you have a feature request or improvement idea, please open an issue
-on our [GitHub Issues
-page](https://github.com/your-username/dashkick-analytics/issues) using
-the “Feature Request” template.
-
 ## Documentation
 
 Contributions to documentation are highly valuable. If you find areas
 where the documentation can be improved or expanded, please submit a
 pull request.
 
-## Testing
-
-Help us maintain code quality by writing tests. Check our [Testing
-Guide](./TESTING.md) for information on how to run tests and contribute
-new ones.
-
 ## Code Review
 
-All code contributions go through a review process. Familiarize yourself
-with our [Code Review Guidelines](./CODE_REVIEW.md) to ensure a smooth
-review process.
+All code contributions go through a review process.
 
 ## Acknowledgments
 
