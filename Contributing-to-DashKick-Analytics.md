@@ -40,7 +40,7 @@ contributing. We aim to foster an inclusive and respectful community.
 
 We welcome contributions from the community! If you’re new to
 contributing to open source projects, check out our [Contributing
-Guide](./CONTRIBUTING.md) for detailed information on how you can get
+Guide](./Contributing Guide.md) for detailed information on how you can get
 involved.
 
 ## Development Workflow
