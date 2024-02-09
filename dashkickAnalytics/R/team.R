@@ -31,29 +31,32 @@ game_changers <- function() {
 
   for(page in 1:47)
   {
-    queryString <- list(
-      league = "39",
-      season = "2023",
-      page = page
-    )
+      queryString <- list(
+        league = "39",
+        season = "2023",
+        page = page
+      )
 
-    response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
-    json_string <- content(response, "text", encoding='UTF-8')
-    json_data <- fromJSON(json_string)
-    player_stats <- json_data$response
+      tryCatch({
+        response <- VERB("GET", url, query = queryString, add_headers('X-RapidAPI-Key' = '1272d4dfaamshea38349fbd93df4p178e05jsn2804b1438ab3', 'X-RapidAPI-Host' = 'api-football-v1.p.rapidapi.com'), content_type("application/octet-stream"))
+        json_string <- content(response, "text", encoding='UTF-8')
+        json_data <- fromJSON(json_string)
+        player_stats <- json_data$response
 
-    df <- data.frame(
-      PlayerName = paste(player_stats$player$firstname, player_stats$player$lastname),
-      Team = sapply(player_stats$statistics, function(stat) (stat$team$name[[1]])),
-      PlayerAge = player_stats$player$age,
-      Appearances = sapply(player_stats$statistics, function(stat) sum(stat$games$appearences, na.rm = TRUE)),
-      Goals = sapply(player_stats$statistics, function(stat) sum(stat$goals$total, na.rm = TRUE)),
-      Assists = sapply(player_stats$statistics, function(stat) sum(stat$goals$assists, na.rm = TRUE)),
-      PenaltyGoals = sapply(player_stats$statistics, function(stat) sum(stat$penalty$scored, na.rm = TRUE))
-    )
+        df <- data.frame(
+          PlayerName = paste(player_stats$player$firstname, player_stats$player$lastname),
+          Team = sapply(player_stats$statistics, function(stat) (stat$team$name[[1]])),
+          PlayerAge = player_stats$player$age,
+          Appearances = sapply(player_stats$statistics, function(stat) sum(stat$games$appearences, na.rm = TRUE)),
+          Goals = sapply(player_stats$statistics, function(stat) sum(stat$goals$total, na.rm = TRUE)),
+          Assists = sapply(player_stats$statistics, function(stat) sum(stat$goals$assists, na.rm = TRUE)),
+          PenaltyGoals = sapply(player_stats$statistics, function(stat) sum(stat$penalty$scored, na.rm = TRUE))
+        )
 
-    all_players <- rbind(rbind(all_players, df)
-    )
+        all_players <- rbind(rbind(all_players, df))
+    }, error = function(e) {
+      message('An error occurred while fetching data: ', e$message)
+    })
   }
 
   all_players$GoalsAssists = all_players$Goals + all_players$Assists
