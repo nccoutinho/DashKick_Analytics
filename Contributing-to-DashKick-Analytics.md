@@ -46,7 +46,7 @@ involved.
 ## Development Workflow
 
 To understand our development workflow, refer to our [Development
-Workflow Guide](./DEVELOPMENT_WORKFLOW.md). This guide provides
+Workflow Guide](https://github.com/nccoutinho/DashKick_Analytics/blob/main/dashkickAnalytics/vignettes/Vignette.Rmd). This guide provides
 information on branching strategies, pull requests, and more.
 
 ## Reporting Issues
