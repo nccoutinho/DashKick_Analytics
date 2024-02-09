@@ -1,0 +1,96 @@
+---
+title: "Logs_Natalie Coutinho"
+author: "Natalie Crystal Coutinho"
+date: "2024-02-08"
+output: html_document
+---
+
+# DashKick Analytics Commit Logs_Natalie Coutinho
+
+We chose a Football API, driven by our shared passion and love for the beautiful game.
+
+## Recent Commits
+
+Initially we worked in branches and then merged to main.
+
+### Jan 25, 2024
+
+#### Commit 1
+
+- Started building the predict_win() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/2946d05f4d7f6fb10f84deb77b65ac2fb74bfaf3)
+
+#### Commit 2
+
+- Worked to build the model using different prediction models and predictors to achieve a desired result.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/03803f2c4a44624667af716f33427f68e8eda1e4)
+
+### Jan 28, 2024
+
+#### Commit 3
+
+- Continued with model building for the predict_win() function to enhance the accuracy.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/19242528c147dd2c4669d56acd82736940d67e63)
+
+#### Commit 4
+
+- Partially finalized the model for the predict_win() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/f2a76d2ef7d967007b06024b87ed31c1d197792b)
+
+### Jan 31, 2024
+
+#### Commit 5
+
+- Started with model building for the second function predict_final_standings().
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/a15106e385fba82537ab341b991a3e7bbe63c6d5)
+
+#### Commit 6
+
+- Continued with model building for the predict_final_standings() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/6148e79cbb5425f640299354ee715373dec173a5)
+
+#### Commit 7
+
+- Partially finalized the model for the predict_final_standings() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/cd75ac9afa9f594a02c6f897af1dcfcf4e258baa)
+
+#### Commit 8
+
+- Connected the API to the two functions.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/dd898829c77f296331cdbc1662acb893fc90d624)
+
+#### Commit 9
+
+- Scrapping the necessary data needed for the function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/ba02fdbc66c8b5882c87f7fb2e145d50f8ee6d11)
+
+#### Commit 10
+
+- Updated the functions to make sure the scrapped data fits the function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/2dcd5c81b2e7b8c81dce611dee22c4da12b3a4dd)
+
+### Feb 1, 2024
+
+#### Commit 11
+
+- Created test cases for predict_win() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/f392e2e741eff52122d272b651ccaf0a002c7a98)
+
+### Feb 2, 2024
+
+#### Commit 12
+
+- Created test cases for predict_final_standings() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/336aa92ff467e4f51d87ddb74572475b7ac17b00)
+
+### Feb 8, 2024
+
+#### Commit 13
+
+- Added error handling for predict_win() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/b24ee3896be51e4a4ccdb30783ba25bc88c82e4c)
+
+#### Commit 14
+
+- Added error handling for predict_final_standings() function.
+- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/aa60786174382cff2c64fab2fd37c8a946948387)
