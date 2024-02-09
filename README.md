@@ -72,7 +72,7 @@ The `visualizations` module facilitates the creation of interactive visualizatio
 
 ## Coverage Report
 
-[![Coverage Report](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Coverage%20Report.png)]
+![Coverage Report](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Coverage%20Report.png)
 
 ## Conclusion
 
