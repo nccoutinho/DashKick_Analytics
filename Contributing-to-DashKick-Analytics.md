@@ -61,13 +61,7 @@ All code contributions go through a review process.
 ## Acknowledgments
 
 We appreciate all contributors for their time and effort. See the
-[Acknowledgments](./ACKNOWLEDGMENTS.md) file for a list of contributors
+[Acknowledgments](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Documentation/Acknowledgement.md) file for a list of contributors
 and contributors’ guidelines.
 
 Thank you for contributing to DashKick Analytics!
-
-------------------------------------------------------------------------
-
-**Note:** Please replace placeholders like `your-username` and customize
-the file names and content according to your project’s structure and
-needs.
