@@ -6,7 +6,7 @@ Authors:
     person("Natalie Coutinho", "coutinho.natalie0@gmail.com", role = c("aut", "cre"))
     person("Pranav Kumar Mahesh", "pranava.km@gmail.com", role = c("aut", "cre"))
 Description: The dashkickAnalytics package is a robust tool designed for streamlined soccer team management, player performance evaluation, and strategic decision-making. Leveraging advanced analytics and intuitive visualizations, this package provides users with a comprehensive platform.
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
@@ -26,3 +26,4 @@ Imports:
   ggplot2,
   ggradar
 Remotes: ricardo-bion/ggradar
+VignetteBuilder: knitr
