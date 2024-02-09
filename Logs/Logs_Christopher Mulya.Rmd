@@ -9,52 +9,66 @@ output: html_document
 
 ## Recent Commits
 
-### Commit 1
+### Jan 25, 2024
 
-- Implemented the initial version of the track_performance R function.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/5e9aba29d72e473d2c8b00ab6884730c88002a9f)
+#### Commit 1
 
-### Commit 2
+-   Implemented the initial version of the track_performance R function.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/5e9aba29d72e473d2c8b00ab6884730c88002a9f)
 
-- Enhanced user experience by adding hover functionality to the line plot.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/be065affe02448588899ee912f85607d0f7b2b87)
+#### Commit 2
 
-### Commit 3
+-   Enhanced user experience by adding hover functionality to the line plot.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/be065affe02448588899ee912f85607d0f7b2b87)
 
-- Acquired team stat data and developed a spider plot code for the first team.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/70f4cd2991154c5a2d212dd790c862a778638503)
+### Jan 28, 2024
 
-### Commit 4
+#### Commit 3
 
-- Implemented a second spider plot for the second team.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/f15263f7cb2c0659fc7b063b9b5d555a53c96776)
+-   Acquired team stat data and developed a spider plot code for the first team.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/70f4cd2991154c5a2d212dd790c862a778638503)
 
-### Commit 5
+### Jan 29, 2024
 
-- Incorporated API call functionality into the track_performance function.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/d3e4db991a401a464f383001d51ed4138619928a)
+#### Commit 4
 
-### Commit 6
+-   Implemented a second spider plot for the second team.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/f15263f7cb2c0659fc7b063b9b5d555a53c96776)
 
-- Strengthened code reliability by adding unit tests for the 'track_performance' function.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/71a996fb1ce43d67937d346288df58164064c87f)
+### Jan 31, 2024
 
-### Commit 7
+#### Commit 5
 
-- Improved code robustness with additional unit tests and error handling for the 'compare_teams' function.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/ddeec94fb59710a54338ad12bf24b7821d87dfb3)
+-   Incorporated API call functionality into the track_performance function.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/d3e4db991a401a464f383001d51ed4138619928a)
 
-### Commit 8
+### Feb 1, 2024
 
-- Initialized a comprehensive readme file to provide a clear project repository description.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/55adee3505c9191799347aea0b8bc3b82200e81d)
+#### Commit 6
 
-### Commit 9
+-   Strengthened code reliability by adding unit tests for the 'track_performance' function.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/71a996fb1ce43d67937d346288df58164064c87f)
 
-- Implemented error handling mechanisms for the track_performance function.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/7e836b5759e92968c8d55333215ad6c137f39a4b)
+#### Commit 7
 
-### Commit 10
+-   Improved code robustness with additional unit tests and error handling for the 'compare_teams' function.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/ddeec94fb59710a54338ad12bf24b7821d87dfb3)
 
-- Established a CODE_OF_CONDUCT.md document to guide project contributors.
-- [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/88b3b2d8324f49d4ffb94c4f925e486c13353517)
+### Feb 3, 2024
+
+#### Commit 8
+
+-   Initialized a comprehensive readme file to provide a clear project repository description.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/55adee3505c9191799347aea0b8bc3b82200e81d)
+
+### Feb 8, 2024
+
+#### Commit 9
+
+-   Implemented error handling mechanisms for the track_performance function.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/7e836b5759e92968c8d55333215ad6c137f39a4b)
+
+#### Commit 10
+
+-   Established a CODE_OF_CONDUCT.md document to guide project contributors.
+-   [Link to Commit](https://github.com/nccoutinho/DashKick_Analytics/commit/88b3b2d8324f49d4ffb94c4f925e486c13353517)
