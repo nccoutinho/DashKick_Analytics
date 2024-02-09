@@ -33,7 +33,7 @@ file for information about the project, its structure, and dependencies.
 
 ## Code of Conduct
 
-Please review our [Code of Conduct](./CODE_OF_CONDUCT.md) before
+Please review our [Code of Conduct](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Contributing_Guide.md) before
 contributing. We aim to foster an inclusive and respectful community.
 
 ## How to Contribute
@@ -46,8 +46,7 @@ involved.
 ## Development Workflow
 
 To understand our development workflow, refer to our [Development
-Workflow Guide](https://github.com/nccoutinho/DashKick_Analytics/blob/main/dashkickAnalytics/vignettes/Vignette.Rmd). This guide provides
-information on branching strategies, pull requests, and more.
+Workflow Guide](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Development_Workflow.md). This guide provides information on branching strategies, pull requests, and more.
 
 ## Reporting Issues
 
