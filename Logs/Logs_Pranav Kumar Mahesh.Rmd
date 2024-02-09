@@ -1,0 +1,91 @@
+---
+title: "Logs - Pranav Kumar Mahesh"
+author: "Pranav Kumar Mahesh"
+date: "2024-02-08"
+output: html_document
+---
+
+# dashkickAnalytics Logs
+
+## Jan 16, 2024
+
+### 1. Selecting the project topic
+
+-   We decided work on a project involving soccer data due to the number of statistics and functionalities involved and selected the API, API-Football to use as it has various information regarding different leagues in Soccer.
+
+## Jan 25, 2024
+
+### 2. First draft of the game_changers function
+
+-   I decided to create the function game_changers which would display the top 20 players in the EPL 2023-24 season in a tabular format and tested out different methods to create this table.
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/2e37672e2bfa293b8b5776a585789dabf4be9334)
+
+### 3. Updating the game_changers function
+
+-   Realizing that a table is not the best option for this function, I decided to create a bar plot visualizing the number of goal contributions made by the top players.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/cbe7ca979c2dc5e67d639686915ec5291bceecf6)
+
+## Jan 31, 2024
+
+### 4. Created new top_20 function for visualization
+
+-   I created a new function, top_20 function to handle the visualization needed for the game_changers function.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/d1193a25f89ebb6a02b1f159c233d48fee1f6c05)
+
+### 5. Created the dashkickAnalytics package
+
+-   I created the dashkickAnalytics package in R.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/dfd3d53c0e977cc613082e95b36ce1b96bc75c18)
+
+### 6. Modified the final_league_standings function
+
+-   I worked on the final_league_standings function, modifying how the function works.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/6bed09d3c4cb038bb729cd71e4f8381dda7ec6bf)
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/bed33e17387f8897b8c65e413125c797e0f0f3c7)
+
+## Feb 2, 2024
+
+### 7. Created test file to test all the functions in the package
+
+-   Added a tests directory in the package hierarchy and created a test file in it to test the functions in the package.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/cf4e254fe79bf237afa33cc60e8ede74535ea96d)
+
+### 8. Enabled GitHub Actions CI
+
+-   Enabled GitHub Actions CI and created a yaml file to run the tests.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/74ffb9f0c17e13bd90df1fa33fbbd8176f9d768a)
+
+### 9. Fixing the test file
+
+-   Due to a number of errors occurring during the CI process, I modified the test file, fixing the issue that was persisting.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/edf787f882beaa83f308718cb96046a91f71e68e)
+
+## Feb 6, 2024
+
+### 10. Added exception handling
+
+-   I added a try-catch block to my functions to handle any errors that may occur.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/7d30b01cf85011940c7e324681cb4ac3ffb417d6)
+
+### 11. Added installation steps for the package in the documentation
+
+-   I added the installation steps for the package in the README file, which would make the package public.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/939d7a9ff959cc01d77a32175ea4aa57bdafea04)
+
+## Feb 8, 2024
+
+### 12. Added the vignette in the vignettes folder
+
+-   I added the vignette in the vignettes folder.
+
+-   [Commit Link](https://github.com/nccoutinho/DashKick_Analytics/commit/42acd2d419fc76e8d0bf04531621ac16a505ff61)
