@@ -70,6 +70,10 @@ The `visualizations` module facilitates the creation of interactive visualizatio
    - The track_performance function illustrates a team's performance over time with a multi-line plot. By visualizing the number of goals made by a team across multiple matches, users can identify trends, assess consistency, and gain a deeper understanding of a team's strengths and areas for improvement.
 
 
+## Coverage Report
+
+![Coverage Report](https://github.com/nccoutinho/DashKick_Analytics/blob/main/Coverage%20Report.png)
+
 ## Conclusion
 
 The `dashkick_analytics` package simplifies soccer team analysis, providing valuable insights and predictive capabilities. Explore the documentation for detailed function descriptions and parameters.
