@@ -1,13 +1,10 @@
 ---
-title: "Contributing Guide"
-author: |
-  Christopher Mulya  
-  Natalie Coutinho  
-  Pranav Kumar Mahesh
+Authors: 
+  - Christopher Mulya  
+  - Natalie Coutinho  
+  - Pranav Kumar Mahesh
   
-date: "2024-02-09"
-
-output: html_document
+date: 2024-02-08
 ---
 
 # Contributing to DashKick Analytics
